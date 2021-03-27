@@ -15,6 +15,7 @@
 		F1FE1A25260F2EEF00FA249E /* UserDataCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE1A24260F2EEF00FA249E /* UserDataCollectionTests.swift */; };
 		F1FE1A30260F2EEF00FA249E /* UserDataCollectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE1A2F260F2EEF00FA249E /* UserDataCollectionUITests.swift */; };
 		F1FE1A54260F41CE00FA249E /* Integration in Frameworks */ = {isa = PBXBuildFile; productRef = F1FE1A53260F41CE00FA249E /* Integration */; };
+		F1FE1A63260F4C3D00FA249E /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A5F260F44F800FA249E /* AppIcon.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F1FE1A2F260F2EEF00FA249E /* UserDataCollectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataCollectionUITests.swift; sourceTree = "<group>"; };
 		F1FE1A31260F2EEF00FA249E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1FE1A43260F3C4800FA249E /* Core */ = {isa = PBXFileReference; lastKnownFileType = text; path = Core; sourceTree = SOURCE_ROOT; };
+		F1FE1A5F260F44F800FA249E /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +103,11 @@
 		F1FE1A0C260F2EEE00FA249E /* UserDataCollection */ = {
 			isa = PBXGroup;
 			children = (
+				F1FE1A58260F442800FA249E /* Resources */,
 				F1FE1A43260F3C4800FA249E /* Core */,
 				F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */,
 				F1FE1A0F260F2EEE00FA249E /* SceneDelegate.swift */,
 				F1FE1A11260F2EEE00FA249E /* ViewController.swift */,
-				F1FE1A16260F2EEE00FA249E /* Assets.xcassets */,
-				F1FE1A18260F2EEE00FA249E /* LaunchScreen.storyboard */,
 				F1FE1A1B260F2EEE00FA249E /* Info.plist */,
 			);
 			path = UserDataCollection;
@@ -135,6 +136,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1FE1A58260F442800FA249E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1FE1A16260F2EEE00FA249E /* Assets.xcassets */,
+				F1FE1A5F260F44F800FA249E /* AppIcon.xcassets */,
+				F1FE1A18260F2EEE00FA249E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FE1A63260F4C3D00FA249E /* AppIcon.xcassets in Resources */,
 				F1FE1A1A260F2EEE00FA249E /* LaunchScreen.storyboard in Resources */,
 				F1FE1A17260F2EEE00FA249E /* Assets.xcassets in Resources */,
 			);
