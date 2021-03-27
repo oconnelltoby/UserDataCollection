@@ -1,0 +1,8 @@
+#include "../../Configurations/Targets/Test.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = uk.nhs.covid19.UserDataCollectionTests
+
+INFOPLIST_FILE = UserDataCollectionTests/Configurations/Info.plist
+
+TEST_HOST = $(BUILT_PRODUCTS_DIR)/UserDataCollection.app/UserDataCollection
+

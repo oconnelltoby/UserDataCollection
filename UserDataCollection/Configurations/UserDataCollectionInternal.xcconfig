@@ -1,0 +1,4 @@
+#include "UserDataCollection.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = tobyoconnell.UserDataCollectionInternal
+BUNDLE_DISPLAY_NAME = Scenarios

@@ -1,0 +1,10 @@
+#include "../../Configurations/Targets/App.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = tobyoconnell.UserDataCollection
+BUNDLE_DISPLAY_NAME = User Data Collection
+
+DEVELOPMENT_TEAM = 682USD46BN
+CODE_SIGN_STYLE = Automatic
+
+INFOPLIST_FILE = UserDataCollection/Configurations/Info.plist
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
