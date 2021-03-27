@@ -184,6 +184,7 @@
 		F1FE1A01260F2EEE00FA249E = {
 			isa = PBXGroup;
 			children = (
+				F1FE1A43260F3C4800FA249E /* Core */,
 				F1A5BBF1260F7A5A001EB451 /* Configurations */,
 				F1FE1A0C260F2EEE00FA249E /* UserDataCollection */,
 				F1FE1A23260F2EEF00FA249E /* UserDataCollectionTests */,
@@ -209,7 +210,6 @@
 			children = (
 				F1A5BBC2260F55F9001EB451 /* Configurations */,
 				F1FE1A58260F442800FA249E /* Resources */,
-				F1FE1A43260F3C4800FA249E /* Core */,
 				F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */,
 				F1FE1A0F260F2EEE00FA249E /* SceneDelegate.swift */,
 				F1FE1A11260F2EEE00FA249E /* ViewController.swift */,
