@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WrappingViewController: UIViewController {
+open class WrappingViewController: UIViewController {
     public var content: UIViewController? {
         didSet {
             oldValue.map(remove)
@@ -30,7 +30,7 @@ public class WrappingViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
