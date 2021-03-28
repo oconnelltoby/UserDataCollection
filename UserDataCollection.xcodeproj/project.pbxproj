@@ -104,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F149454F261003B600F67667 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F1FE1A0F260F2EEE00FA249E /* SceneDelegate.swift */,
+				F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		F1A5BBC2260F55F9001EB451 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,10 +214,9 @@
 		F1FE1A0C260F2EEE00FA249E /* UserDataCollection */ = {
 			isa = PBXGroup;
 			children = (
+				F149454F261003B600F67667 /* Sources */,
 				F1A5BBC2260F55F9001EB451 /* Configurations */,
 				F1FE1A58260F442800FA249E /* Resources */,
-				F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */,
-				F1FE1A0F260F2EEE00FA249E /* SceneDelegate.swift */,
 			);
 			path = UserDataCollection;
 			sourceTree = "<group>";
