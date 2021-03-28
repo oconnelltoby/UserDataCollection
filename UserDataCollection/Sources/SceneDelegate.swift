@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Integration
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
-        RootCoordinator(navigationController: navigationController).start()
+        AppCoordinator(navigationController: navigationController).start()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
