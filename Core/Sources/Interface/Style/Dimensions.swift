@@ -7,7 +7,7 @@
 
 import CoreGraphics
 
-extension CGFloat {
+public extension CGFloat {
     static let standardSpacing: CGFloat = 16
     static let halfSpacing: CGFloat = standardSpacing / 2
 
