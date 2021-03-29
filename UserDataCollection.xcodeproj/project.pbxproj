@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F149459526108D0B00F67667 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149459426108D0B00F67667 /* AppCoordinator.swift */; };
 		F149459A26108D1000F67667 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149458E26108D0300F67667 /* AppCoordinator.swift */; };
+		F157B6AB2611325200B9C3C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F157B6AA2611325200B9C3C3 /* Colors.xcassets */; };
+		F157B6AC2611325F00B9C3C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F157B6AA2611325200B9C3C3 /* Colors.xcassets */; };
 		F1A5BC29260F8EF0001EB451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */; };
 		F1A5BC2A260F8EF0001EB451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE1A0F260F2EEE00FA249E /* SceneDelegate.swift */; };
 		F1A5BC2F260F8EF0001EB451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A18260F2EEE00FA249E /* LaunchScreen.storyboard */; };
@@ -45,6 +47,7 @@
 /* Begin PBXFileReference section */
 		F149458E26108D0300F67667 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F149459426108D0B00F67667 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F157B6AA2611325200B9C3C3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F1A5BBCC260F7574001EB451 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F1A5BBCD260F7596001EB451 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		F1A5BBCF260F75EF001EB451 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
@@ -274,6 +277,7 @@
 				F1A5BC3B260F8F67001EB451 /* Internal */,
 				F1A5BC3D260F8F67001EB451 /* Production */,
 				F1FE1A16260F2EEE00FA249E /* Assets.xcassets */,
+				F157B6AA2611325200B9C3C3 /* Colors.xcassets */,
 				F1FE1A18260F2EEE00FA249E /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -407,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A5BC2F260F8EF0001EB451 /* LaunchScreen.storyboard in Resources */,
+				F157B6AC2611325F00B9C3C3 /* Colors.xcassets in Resources */,
 				F1A5BC52260F9033001EB451 /* AppIcon.xcassets in Resources */,
 				F1A5BC30260F8EF0001EB451 /* Assets.xcassets in Resources */,
 			);
@@ -417,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FE1A63260F4C3D00FA249E /* AppIcon.xcassets in Resources */,
+				F157B6AB2611325200B9C3C3 /* Colors.xcassets in Resources */,
 				F1FE1A1A260F2EEE00FA249E /* LaunchScreen.storyboard in Resources */,
 				F1FE1A17260F2EEE00FA249E /* Assets.xcassets in Resources */,
 			);
