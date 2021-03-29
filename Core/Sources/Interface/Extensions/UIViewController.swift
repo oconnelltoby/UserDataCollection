@@ -17,14 +17,7 @@ extension UIViewController {
     
     func add(child: UIViewController) {
         addChild(child)
-        child.view.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(child.view)
-        NSLayoutConstraint.activate([
-            child.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            child.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            child.view.topAnchor.constraint(equalTo: view.topAnchor),
-            child.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        view.addFillingSubview(child.view)
         child.willMove(toParent: self)
     }
 }
