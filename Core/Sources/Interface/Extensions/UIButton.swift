@@ -41,4 +41,10 @@ extension UIButton {
         addAction(.init(handler: { _ in action() }), for: .touchUpInside)
         return self
     }
+    
+    @discardableResult
+    public func addTitle(_ title: String) -> Self {
+        setTitle(title, for: .normal)
+        return self
+    }
 }
