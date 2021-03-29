@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum ColorName: String, CaseIterable {
+public enum ColorName: String, CaseIterable {
     case accentGreen = "AccentGreen"
     case accentTeal = "AccentTeal"
     case primaryButtonText = "PrimaryButtonText"
@@ -17,7 +17,7 @@ enum ColorName: String, CaseIterable {
 extension UIColor {
     static var bundle: Bundle = Bundle.main
     
-    convenience init(_ name: ColorName) {
+    public convenience init(_ name: ColorName) {
         self.init(named: name.rawValue)!
     }
     
