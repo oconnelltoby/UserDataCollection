@@ -8,15 +8,19 @@
 import Integration
 import UIKit
 
-public class ScenarioCoordinator: Coordinating {
-    public var navigationController: UINavigationController
+class ScenarioCoordinator: Coordinating {
+    var navigationController: UINavigationController
+    private let viewController = ScenarioWrappingViewController()
     
-    public init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    public func start() {
-        let viewController = ScenarioWrappingViewController()
+    func updateContent() {
+        viewController.updateContent()
+    }
+    
+    func start() {
         navigationController.pushViewController(viewController, animated: false)
     }
 }

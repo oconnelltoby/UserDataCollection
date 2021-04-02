@@ -10,15 +10,20 @@ import Scenarios
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    private let appController = ScenarioAppController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
-        let navigationController = UINavigationController()
-        ScenarioCoordinator(navigationController: navigationController).start()
-        window?.rootViewController = navigationController
+        appController.start()
+        window?.rootViewController = appController.rootViewController
         window?.makeKeyAndVisible()
+    }
+    
+    func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        let success = appController.performAction(for: shortcutItem)
+        completionHandler(success)
     }
 }
 

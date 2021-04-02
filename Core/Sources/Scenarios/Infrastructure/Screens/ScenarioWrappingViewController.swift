@@ -9,14 +9,14 @@ import Integration
 import Interface
 import UIKit
 
-public class ScenarioWrappingViewController: WrappingViewController {
-    private var activeScenarioID: ScenarioID? {
+class ScenarioWrappingViewController: WrappingViewController {
+    @UserDefault(UserDefaultKeys.activeScenarioID) private var activeScenarioID: ScenarioID? {
         didSet {
             updateContent()
         }
     }
     
-    public override init() {
+    override init() {
         super.init()
         updateContent()
     }
