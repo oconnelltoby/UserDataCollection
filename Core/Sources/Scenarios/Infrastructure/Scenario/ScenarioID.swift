@@ -7,24 +7,24 @@
 
 import UIKit
 
-struct ScenarioID: CaseIterable {
+public struct ScenarioID: CaseIterable, RawRepresentable {
     var scenarioType: Scenario.Type
     
     init(type: Scenario.Type) {
         scenarioType = type
     }
     
-    init?(rawValue: String) {
+    public init?(rawValue: String) {
         guard let type = NSClassFromString(rawValue) else { return nil }
         guard let conformingType = type as? Scenario.Type else { return nil }
         scenarioType = conformingType
     }
     
-    var rawValue: String {
+    public var rawValue: String {
         scenarioType.id
     }
     
-    static let allCases: [ScenarioID] = {
+    public static let allCases: [ScenarioID] = {
         var count: UInt32 = 0
         let classes = objc_copyClassList(&count)
         let buffer = UnsafeBufferPointer(start: classes, count: Int(count))
