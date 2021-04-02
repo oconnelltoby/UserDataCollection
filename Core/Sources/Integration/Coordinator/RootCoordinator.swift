@@ -8,14 +8,14 @@
 import Interface
 import UIKit
 
-public struct RootCoordinator: Coordinating {
-    public var navigationController: UINavigationController
+struct RootCoordinator: Coordinating {
+    var navigationController: UINavigationController
     
-    public init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    public func start() {
+    func start() {
         navigationController.pushViewController(ViewController(), animated: false)
     }
 }
