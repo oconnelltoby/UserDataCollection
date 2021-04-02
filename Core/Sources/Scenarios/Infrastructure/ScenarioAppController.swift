@@ -8,7 +8,7 @@
 import Integration
 import UIKit
 
-public class ScenarioAppController: AppController {
+public class ScenarioAppController: AppControlling {
     @UserDefault(UserDefaultKeys.activeScenarioID) private var activeScenarioID: ScenarioID? {
         didSet {
             coordinator.updateContent()

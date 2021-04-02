@@ -7,6 +7,6 @@
 
 import UIKit
 
-public protocol AppController {
+public protocol AppControlling {
     var rootViewController: UIViewController { get }
 }
