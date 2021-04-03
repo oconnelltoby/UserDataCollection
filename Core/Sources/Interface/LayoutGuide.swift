@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// A unified protocl for UILayoutGuide and UIView
+/// A unified protocol for UILayoutGuide and UIView
 ///
 /// Stops the need for using `Any` everywhere like `NSLayoutConstraint` does
 
