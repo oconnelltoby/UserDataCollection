@@ -8,9 +8,18 @@
 import UIKit
 
 extension UILabel {
-    func styleAsDyanmicText(_ style: UIFont.TextStyle) {
+    
+    @discardableResult
+    public func styleAsDyanmicText(_ style: UIFont.TextStyle) -> Self {
         font = .preferredFont(forTextStyle: style)
         numberOfLines = 0
         adjustsFontForContentSizeCategory = true
+        return self
+    }
+    
+    @discardableResult
+    public func addText(_ text: String) -> Self {
+        self.text = text
+        return self
     }
 }
