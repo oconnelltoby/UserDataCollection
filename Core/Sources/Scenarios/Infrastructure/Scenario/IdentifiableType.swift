@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol IdentifiableType: AnyObject {
+public protocol IdentifiableType: AnyObject {
     static var id: String { get }
 }
 
-extension IdentifiableType {
+public extension IdentifiableType {
     static var id: String {
         NSStringFromClass(Self.self)
     }

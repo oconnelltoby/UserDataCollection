@@ -7,7 +7,7 @@
 
 import Integration
 
-protocol Scenario: IdentifiableType {
+public protocol Scenario: IdentifiableType {
     static var path: Path { get }
     static var coordinator: Coordinating { get }
 }

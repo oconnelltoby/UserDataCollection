@@ -5,7 +5,7 @@
 //  Created by Toby O'Connell on 27/03/2021.
 //
 
-class Path {
+public class Path {
     var title: String
     var tail: Path?
     
