@@ -37,7 +37,7 @@ extension UIButton {
     }
     
     @discardableResult
-    func addAction(_ action: @escaping () -> Void) -> Self {
+    public func addAction(_ action: @escaping () -> Void) -> Self {
         addAction(.init(handler: { _ in action() }), for: .touchUpInside)
         return self
     }
