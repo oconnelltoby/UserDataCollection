@@ -16,6 +16,7 @@
 		F1A5BC30260F8EF0001EB451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A16260F2EEE00FA249E /* Assets.xcassets */; };
 		F1A5BC52260F9033001EB451 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A5BC4D260F8F87001EB451 /* AppIcon.xcassets */; };
 		F1D902B7260F9320007D4906 /* Scenarios in Frameworks */ = {isa = PBXBuildFile; productRef = F1D902B6260F9320007D4906 /* Scenarios */; };
+		F1E871C32618693B000F89A0 /* Scenarios in Frameworks */ = {isa = PBXBuildFile; productRef = F1E871C22618693B000F89A0 /* Scenarios */; };
 		F1FE1A0E260F2EEE00FA249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */; };
 		F1FE1A17260F2EEE00FA249E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A16260F2EEE00FA249E /* Assets.xcassets */; };
 		F1FE1A1A260F2EEE00FA249E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A18260F2EEE00FA249E /* LaunchScreen.storyboard */; };
@@ -26,14 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F1FE1A21260F2EEF00FA249E /* PBXContainerItemProxy */ = {
+		F1E871C026186937000F89A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1FE1A02260F2EEE00FA249E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F1FE1A09260F2EEE00FA249E;
-			remoteInfo = UserDataCollection;
+			remoteGlobalIDString = F1A5BC25260F8EF0001EB451;
+			remoteInfo = UserDataCollectionInternal;
 		};
-		F1FE1A2C260F2EEF00FA249E /* PBXContainerItemProxy */ = {
+		F1FE1A21260F2EEF00FA249E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1FE1A02260F2EEE00FA249E /* Project object */;
 			proxyType = 1;
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E871C32618693B000F89A0 /* Scenarios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +353,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				F1FE1A2D260F2EEF00FA249E /* PBXTargetDependency */,
+				F1E871C126186937000F89A0 /* PBXTargetDependency */,
 			);
 			name = UserDataCollectionUITests;
+			packageProductDependencies = (
+				F1E871C22618693B000F89A0 /* Scenarios */,
+			);
 			productName = UserDataCollectionUITests;
 			productReference = F1FE1A2B260F2EEF00FA249E /* UserDataCollectionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -478,15 +483,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F1E871C126186937000F89A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1A5BC25260F8EF0001EB451 /* UserDataCollectionInternal */;
+			targetProxy = F1E871C026186937000F89A0 /* PBXContainerItemProxy */;
+		};
 		F1FE1A22260F2EEF00FA249E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F1FE1A09260F2EEE00FA249E /* UserDataCollection */;
 			targetProxy = F1FE1A21260F2EEF00FA249E /* PBXContainerItemProxy */;
-		};
-		F1FE1A2D260F2EEF00FA249E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F1FE1A09260F2EEE00FA249E /* UserDataCollection */;
-			targetProxy = F1FE1A2C260F2EEF00FA249E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,6 +629,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		F1D902B6260F9320007D4906 /* Scenarios */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Scenarios;
+		};
+		F1E871C22618693B000F89A0 /* Scenarios */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Scenarios;
 		};
