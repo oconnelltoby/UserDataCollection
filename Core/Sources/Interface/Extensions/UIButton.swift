@@ -18,6 +18,7 @@ extension UIButton {
         setTitleColor(.init(.primaryButtonText), for: .normal)
                 
         let gradientView = GradientView()
+        gradientView.isUserInteractionEnabled = false
         gradientView.translatesAutoresizingMaskIntoConstraints = false
         insertSubview(gradientView, at: 0)
         clipsToBounds = true
