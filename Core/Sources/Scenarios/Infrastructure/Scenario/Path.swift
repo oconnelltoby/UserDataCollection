@@ -20,3 +20,11 @@ public class Path {
         }
     }
 }
+
+extension Path: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        [title, tail?.debugDescription]
+            .compactMap { $0 }
+            .joined(separator: "/")
+    }
+}
