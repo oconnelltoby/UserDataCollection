@@ -46,7 +46,7 @@ public class TemplateView: UIView {
             footerStackView.leadingAnchor.constraint(equalTo: readableContentGuide.leadingAnchor),
             footerStackView.trailingAnchor.constraint(equalTo: readableContentGuide.trailingAnchor),
             footerStackView.topAnchor.constraint(equalTo: blurView.topAnchor, constant: .standardSpacing),
-            footerStackView.bottomAnchor.constraint(equalTo: blurView.bottomAnchor, constant: -.standardSpacing),
+            footerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -.standardSpacing),
         ])
     }
     
