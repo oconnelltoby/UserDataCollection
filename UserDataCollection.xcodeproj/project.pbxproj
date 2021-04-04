@@ -19,7 +19,7 @@
 		F1E871C32618693B000F89A0 /* Scenarios in Frameworks */ = {isa = PBXBuildFile; productRef = F1E871C22618693B000F89A0 /* Scenarios */; };
 		F1E871F126186AC9000F89A0 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E871EC26186AC9000F89A0 /* XCTestCase.swift */; };
 		F1E871F226186AC9000F89A0 /* PrimaryButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E871EE26186AC9000F89A0 /* PrimaryButtonModel.swift */; };
-		F1E871F326186AC9000F89A0 /* PrimaryButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E871F026186AC9000F89A0 /* PrimaryButtonTests.swift */; };
+		F1E871F326186AC9000F89A0 /* ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E871F026186AC9000F89A0 /* ButtonTests.swift */; };
 		F1FE1A0E260F2EEE00FA249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */; };
 		F1FE1A17260F2EEE00FA249E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A16260F2EEE00FA249E /* Assets.xcassets */; };
 		F1FE1A1A260F2EEE00FA249E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A18260F2EEE00FA249E /* LaunchScreen.storyboard */; };
@@ -64,7 +64,7 @@
 		F1A5BC4D260F8F87001EB451 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		F1E871EC26186AC9000F89A0 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		F1E871EE26186AC9000F89A0 /* PrimaryButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButtonModel.swift; sourceTree = "<group>"; };
-		F1E871F026186AC9000F89A0 /* PrimaryButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButtonTests.swift; sourceTree = "<group>"; };
+		F1E871F026186AC9000F89A0 /* ButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTests.swift; sourceTree = "<group>"; };
 		F1FE1A0A260F2EEE00FA249E /* UserDataCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDataCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1FE1A16260F2EEE00FA249E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		F1E871EF26186AC9000F89A0 /* ComponentTests */ = {
 			isa = PBXGroup;
 			children = (
-				F1E871F026186AC9000F89A0 /* PrimaryButtonTests.swift */,
+				F1E871F026186AC9000F89A0 /* ButtonTests.swift */,
 			);
 			path = ComponentTests;
 			sourceTree = "<group>";
@@ -515,7 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1E871F226186AC9000F89A0 /* PrimaryButtonModel.swift in Sources */,
-				F1E871F326186AC9000F89A0 /* PrimaryButtonTests.swift in Sources */,
+				F1E871F326186AC9000F89A0 /* ButtonTests.swift in Sources */,
 				F1E871F126186AC9000F89A0 /* XCTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

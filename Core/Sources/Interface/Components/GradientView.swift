@@ -8,9 +8,8 @@
 import UIKit
 
 class GradientView: UIView {
-    private lazy var gradientLayer: CAGradientLayer = {
+    private(set) lazy var gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.bounds
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         return gradientLayer
@@ -20,6 +19,9 @@ class GradientView: UIView {
         super.init(frame: .zero)
         setColors()
         layer.insertSublayer(gradientLayer, at: 0)
+
+        isUserInteractionEnabled = false
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {

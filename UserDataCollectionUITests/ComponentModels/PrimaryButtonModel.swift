@@ -12,11 +12,19 @@ import Scenarios
 struct PrimaryButtonModel {
     var app: XCUIApplication
     
-    var button: XCUIElement {
-        app.staticTexts[PrimaryButtonScenario.buttonTitle]
+    var primaryButton: XCUIElement {
+        app.staticTexts[ButtonScenario.primaryButtonTitle]
     }
     
-    var alertTitle: XCUIElement {
-        app.staticTexts[PrimaryButtonScenario.alertTitle]
+    var primaryButtonAlertTitle: XCUIElement {
+        app.staticTexts[ButtonScenario.primaryButtonAlertTitle]
+    }
+
+    var secondaryButton: XCUIElement {
+        app.staticTexts[ButtonScenario.secondaryButtonTitle]
+    }
+
+    var secondaryButtonAlertTitle: XCUIElement {
+        app.staticTexts[ButtonScenario.secondaryButtonAlertTitle]
     }
 }

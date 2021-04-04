@@ -10,11 +10,21 @@ import UIKit
 extension UIButton {
     @discardableResult
     public func styleAsPrimary() -> Self {
+        style(with: GradientView())
+    }
+
+    @discardableResult
+    public func styleAsSecondary() -> Self {
+        style(with: BorderGradientView(cornerRadius: .buttonCornerRadius))
+    }
+
+
+    @discardableResult
+    private func style(with gradientView: GradientView) -> Self {
         layer.cornerRadius = .buttonCornerRadius
         titleLabel?.styleAsDyanmicText(.headline).centralize()
         setTitleColor(.init(.primaryText), for: .normal)
-                
-        let gradientView = GradientView()
+
         insertSubview(gradientView, at: 0)
         clipsToBounds = true
         
