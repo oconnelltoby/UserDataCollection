@@ -10,7 +10,7 @@ import UIKit
 public enum ColorName: String, CaseIterable {
     case accentGreen = "AccentGreen"
     case accentTeal = "AccentTeal"
-    case primaryButtonText = "PrimaryButtonText"
+    case primaryText = "PrimaryText"
     case background = "Background"
 }
 

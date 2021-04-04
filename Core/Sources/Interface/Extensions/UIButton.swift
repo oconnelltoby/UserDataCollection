@@ -11,11 +11,10 @@ extension UIButton {
     @discardableResult
     public func styleAsPrimary() -> Self {
         layer.cornerRadius = .buttonCornerRadius
-        tintColor = UIColor(.primaryButtonText)
         titleLabel?.styleAsDyanmicText(.headline)
         titleLabel?.textAlignment = .center
         
-        setTitleColor(.init(.primaryButtonText), for: .normal)
+        setTitleColor(.init(.primaryText), for: .normal)
                 
         let gradientView = GradientView()
         gradientView.isUserInteractionEnabled = false
