@@ -12,7 +12,7 @@ extension Array where Element == HierarchyViewController.Item {
         let existingItem = first { $0.title == path.title }
         
         switch (existingItem, path.tail) {
-        case (.some(var existingItem), .some(let subPath)):
+        case (.some(let existingItem), .some(let subPath)):
             try existingItem.insert(subPath: subPath, action: action)
         case (.some(let existingItem), .none):
             throw InsertionError(message: "Attempting to overwrite item \"\(existingItem.title)\" with new action")
@@ -35,7 +35,7 @@ extension HierarchyViewController.Item {
         let message: String
     }
     
-    fileprivate mutating func insert(subPath: Path, action: @escaping () -> Void) throws {
+    fileprivate func insert(subPath: Path, action: @escaping () -> Void) throws {
         switch part {
         case .leaf:
             throw InsetionError(message: "Attempting to overwrite item \"\(title)\" with sub-items")

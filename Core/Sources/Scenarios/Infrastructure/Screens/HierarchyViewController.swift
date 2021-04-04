@@ -12,7 +12,7 @@ extension HierarchyViewController {
         case main
     }
     
-    public struct Item: Hashable {
+    public class Item: Hashable {
         public enum Part {
             case leaf(action: () -> Void)
             case node(items: [Item])
