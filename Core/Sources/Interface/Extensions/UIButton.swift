@@ -11,14 +11,10 @@ extension UIButton {
     @discardableResult
     public func styleAsPrimary() -> Self {
         layer.cornerRadius = .buttonCornerRadius
-        titleLabel?.styleAsDyanmicText(.headline)
-        titleLabel?.textAlignment = .center
-        
+        titleLabel?.styleAsDyanmicText(.headline).centralize()
         setTitleColor(.init(.primaryText), for: .normal)
                 
         let gradientView = GradientView()
-        gradientView.isUserInteractionEnabled = false
-        gradientView.translatesAutoresizingMaskIntoConstraints = false
         insertSubview(gradientView, at: 0)
         clipsToBounds = true
         
@@ -26,12 +22,9 @@ extension UIButton {
             heightAnchor.constraint(greaterThanOrEqualToConstant: .buttonMinimumHeight),
             heightAnchor.constraint(greaterThanOrEqualTo: titleLabel!.heightAnchor, constant: .halfSpacing * 2),
             widthAnchor.constraint(greaterThanOrEqualTo: titleLabel!.widthAnchor, constant: .standardSpacing * 2),
-            
-            gradientView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            gradientView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            gradientView.topAnchor.constraint(equalTo: topAnchor),
-            gradientView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
+
+        constrain(gradientView, to: self)
         
         return self
     }
