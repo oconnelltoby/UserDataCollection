@@ -62,6 +62,7 @@
 		F1A5BC00260F8C81001EB451 /* UserDataCollectionUITests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UserDataCollectionUITests.xcconfig; sourceTree = "<group>"; };
 		F1A5BC34260F8EF0001EB451 /* UserDataCollectionInternal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDataCollectionInternal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5BC4D260F8F87001EB451 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		F1E0E51D2619AC3B009FEA2E /* CLI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CLI; sourceTree = "<group>"; };
 		F1E871EC26186AC9000F89A0 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		F1E871EE26186AC9000F89A0 /* PrimaryButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButtonModel.swift; sourceTree = "<group>"; };
 		F1E871F026186AC9000F89A0 /* ButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTests.swift; sourceTree = "<group>"; };
@@ -249,6 +250,7 @@
 		F1FE1A01260F2EEE00FA249E = {
 			isa = PBXGroup;
 			children = (
+				F1E0E51D2619AC3B009FEA2E /* CLI */,
 				F1FE1A43260F3C4800FA249E /* Core */,
 				F1A5BBF1260F7A5A001EB451 /* Configurations */,
 				F1FE1A0C260F2EEE00FA249E /* UserDataCollection */,
