@@ -11,7 +11,7 @@ struct CLI: ParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "cli",
         abstract: "CLI commands",
-        subcommands: [Lint.self]
+        subcommands: [Lint.self, Format.self]
     )
 }
 
