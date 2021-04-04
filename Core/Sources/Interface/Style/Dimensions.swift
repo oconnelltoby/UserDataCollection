@@ -12,5 +12,6 @@ public extension CGFloat {
     static let halfSpacing: CGFloat = standardSpacing / 2
 
     static let buttonCornerRadius: CGFloat = 15
+    static let borderWidth: CGFloat = 2
     static let buttonMinimumHeight: CGFloat = 45
 }
