@@ -22,4 +22,9 @@ extension UILabel {
         self.text = text
         return self
     }
+    @discardableResult
+    public func centralize() -> Self {
+        textAlignment = .center
+        return self
+    }
 }
