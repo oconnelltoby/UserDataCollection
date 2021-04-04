@@ -17,6 +17,9 @@ class ShortcutManager {
 
     init(shortcuts: [(actionType: ActionType, action: () -> Void)]) {
         self.shortcuts = shortcuts.map { ($0.actionType.item, $0.action) }
+    }
+
+    func addShortcuts() {
         UIApplication.shared.shortcutItems = self.shortcuts.map { $0.item }
     }
 

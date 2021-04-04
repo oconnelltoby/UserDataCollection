@@ -15,7 +15,9 @@ public class ScenarioAppController: AppControlling {
         }
     }
     
-    public init() {}
+    public init() {
+        shortcutManager.addShortcuts()
+    }
     
     private let naviagtionController = UINavigationController()
     private lazy var coordinator = ScenarioCoordinator(navigationController: naviagtionController)
