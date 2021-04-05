@@ -10,7 +10,6 @@ let package = Package(
         .executable(name: "cli", targets: ["CLI"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/SwiftLint", from: "0.39.1"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.44.4"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.0"),
         .package(url: "https://github.com/JohnSundell/ShellOut.git", from: "2.0.0"),
