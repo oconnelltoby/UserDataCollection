@@ -1,0 +1,66 @@
+{
+  "configurations" : [
+    {
+      "id" : "49538B9E-A07B-40B9-AC7C-EB81B25D4601",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Core",
+        "identifier" : "DomainTests",
+        "name" : "DomainTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Core",
+        "identifier" : "IntegrationTests",
+        "name" : "IntegrationTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Core",
+        "identifier" : "InterfaceTests",
+        "name" : "InterfaceTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Core",
+        "identifier" : "LocalizationTests",
+        "name" : "LocalizationTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Core",
+        "identifier" : "ScenariosTests",
+        "name" : "ScenariosTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:UserDataCollection.xcodeproj",
+        "identifier" : "F1FE1A1F260F2EEF00FA249E",
+        "name" : "UserDataCollectionTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:UserDataCollection.xcodeproj",
+        "identifier" : "F1FE1A2A260F2EEF00FA249E",
+        "name" : "UserDataCollectionUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
