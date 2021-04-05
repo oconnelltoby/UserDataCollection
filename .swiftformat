@@ -1,0 +1,8 @@
+# file options
+
+--exclude **/.build
+--swiftversion 5.2
+
+# rules
+
+# format options
