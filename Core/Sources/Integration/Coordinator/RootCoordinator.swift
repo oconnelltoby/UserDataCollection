@@ -10,11 +10,11 @@ import UIKit
 
 struct RootCoordinator: Coordinating {
     var navigationController: UINavigationController
-    
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     func start() {
         navigationController.pushViewController(ViewController(), animated: false)
     }

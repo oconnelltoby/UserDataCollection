@@ -12,7 +12,7 @@ struct Format: ParsableCommand {
         commandName: "format",
         abstract: "Format the codebase with swiftformat"
     )
-    
+
     @Argument(help: "Path to code that should be formatted")
     var path: String
 

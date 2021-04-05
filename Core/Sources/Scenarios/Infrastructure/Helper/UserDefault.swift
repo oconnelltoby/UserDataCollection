@@ -1,6 +1,6 @@
 //
 //  UserDefault.swift
-//  
+//
 //
 //  Created by Toby O'Connell on 02/04/2021.
 //
@@ -11,7 +11,7 @@ import Foundation
 public struct UserDefault<Value> {
     private let get: () -> Value
     private let set: (Value) -> Void
-    
+
     public var wrappedValue: Value {
         get { get() }
         set { set(newValue) }
@@ -23,7 +23,6 @@ extension UserDefault {
         get = { userDefaults.value(forKey: key) as? T }
         set = { userDefaults.setValue($0, forKey: key) }
     }
-    
 }
 
 extension UserDefault {

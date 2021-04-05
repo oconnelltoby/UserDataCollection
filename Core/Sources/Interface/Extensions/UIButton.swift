@@ -1,23 +1,22 @@
 //
 //  UIButton.swift
-//  
+//
 //
 //  Created by Toby O'Connell on 28/03/2021.
 //
 
 import UIKit
 
-extension UIButton {
+public extension UIButton {
     @discardableResult
-    public func styleAsPrimary() -> Self {
+    func styleAsPrimary() -> Self {
         style(with: GradientView())
     }
 
     @discardableResult
-    public func styleAsSecondary() -> Self {
+    func styleAsSecondary() -> Self {
         style(with: BorderGradientView(cornerRadius: .buttonCornerRadius))
     }
-
 
     @discardableResult
     private func style(with gradientView: GradientView) -> Self {
@@ -27,7 +26,7 @@ extension UIButton {
 
         insertSubview(gradientView, at: 0)
         clipsToBounds = true
-        
+
         NSLayoutConstraint.activate([
             heightAnchor.constraint(greaterThanOrEqualToConstant: .buttonMinimumHeight),
             heightAnchor.constraint(greaterThanOrEqualTo: titleLabel!.heightAnchor, constant: .halfSpacing * 2),
@@ -35,18 +34,18 @@ extension UIButton {
         ])
 
         constrain(gradientView, to: self)
-        
+
         return self
     }
-    
+
     @discardableResult
-    public func addAction(_ action: @escaping () -> Void) -> Self {
+    func addAction(_ action: @escaping () -> Void) -> Self {
         addAction(.init(handler: { _ in action() }), for: .touchUpInside)
         return self
     }
-    
+
     @discardableResult
-    public func addTitle(_ title: String) -> Self {
+    func addTitle(_ title: String) -> Self {
         setTitle(title, for: .normal)
         return self
     }

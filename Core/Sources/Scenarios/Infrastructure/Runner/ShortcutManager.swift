@@ -1,6 +1,6 @@
 //
 //  ShortcutManager.swift
-//  
+//
 //
 //  Created by Toby O'Connell on 02/04/2021.
 //
@@ -12,7 +12,7 @@ class ShortcutManager {
     enum ActionType {
         case resetScenario
     }
-    
+
     private let shortcuts: [(item: UIApplicationShortcutItem, action: () -> Void)]
 
     init(shortcuts: [(actionType: ActionType, action: () -> Void)]) {
@@ -20,14 +20,14 @@ class ShortcutManager {
     }
 
     func addShortcuts() {
-        UIApplication.shared.shortcutItems = self.shortcuts.map { $0.item }
+        UIApplication.shared.shortcutItems = shortcuts.map(\.item)
     }
 
     func performAction(for shortcutItem: UIApplicationShortcutItem) -> Bool {
         guard let shortcut = shortcuts.first(where: { $0.item.type == shortcutItem.type }) else {
             return false
         }
-        
+
         shortcut.action()
         return true
     }

@@ -5,8 +5,8 @@
 //  Created by Toby O'Connell on 27/03/2021.
 //
 
-import XCTest
 @_exported import Scenarios
+import XCTest
 
 extension XCTestCase {
     func launch(scenario: Scenario.Type, work: (XCUIApplication) throws -> Void) rethrows {

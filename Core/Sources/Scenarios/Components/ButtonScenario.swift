@@ -1,6 +1,6 @@
 //
 //  PrimaryButton.swift
-//  
+//
 //
 //  Created by Toby O'Connell on 29/03/2021.
 //
@@ -25,9 +25,9 @@ public class ButtonScenario: Scenario {
         let secondaryButton = UIButton()
             .styleAsSecondary()
             .addTitle(secondaryButtonTitle)
-        
+
         let viewController = ContentViewController(contentProvider: [primaryButton, secondaryButton])
-        
+
         primaryButton.addAction { [weak viewController] in
             viewController?.showAlert(title: primaryButtonAlertTitle, actionTitle: "Ok")
         }
@@ -35,7 +35,7 @@ public class ButtonScenario: Scenario {
         secondaryButton.addAction { [weak viewController] in
             viewController?.showAlert(title: secondaryButtonAlertTitle, actionTitle: "Ok")
         }
-        
+
         return SimpleCoordinator(rootViewController: viewController)
     }
 }

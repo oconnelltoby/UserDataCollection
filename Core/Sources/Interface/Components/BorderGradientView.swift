@@ -1,6 +1,6 @@
 //
 //  ButtonGradientView.swift
-//  
+//
 //
 //  Created by Toby O'Connell on 04/04/2021.
 //
@@ -22,10 +22,6 @@ class BorderGradientView: GradientView {
         self.cornerRadius = cornerRadius
         super.init()
         gradientLayer.mask = maskLayer
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     override func layoutSubviews() {

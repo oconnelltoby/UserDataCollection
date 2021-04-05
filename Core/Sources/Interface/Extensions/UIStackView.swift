@@ -1,6 +1,6 @@
 //
 //  UIStackView.swift
-//  
+//
 //
 //  Created by Toby O'Connell on 29/03/2021.
 //
@@ -13,7 +13,7 @@ public protocol StackContentProvider {
 
 extension Array: StackContentProvider where Element: StackContentProvider {
     public var content: [UIStackView.Content] {
-        flatMap { $0.content }
+        flatMap(\.content)
     }
 }
 
@@ -21,7 +21,7 @@ extension UIView: StackContentProvider {
     public var content: [UIStackView.Content] {
         [.init(view: self)]
     }
-    
+
     func asStackContent(bottomSpacing: CGFloat) -> UIStackView.Content {
         .init(view: self, bottomSpacing: bottomSpacing)
     }
@@ -29,16 +29,16 @@ extension UIView: StackContentProvider {
 
 extension UIStackView.Content: StackContentProvider {
     public var content: [UIStackView.Content] {
-        return [self]
+        [self]
     }
 }
 
 public extension UIStackView {
     struct Content {
         var view: UIView
-        var bottomSpacing: CGFloat? = nil
+        var bottomSpacing: CGFloat?
     }
-    
+
     @discardableResult
     func addContent(from contentProvider: StackContentProvider) -> Self {
         contentProvider.content.forEach { content in
@@ -49,7 +49,7 @@ public extension UIStackView {
         }
         return self
     }
-    
+
     @discardableResult
     func styleAsStandard() -> Self {
         axis = .vertical

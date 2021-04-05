@@ -5,8 +5,8 @@
 //  Created by Toby O'Connell on 31/03/2021.
 //
 
-import XCTest
 import Scenarios
+import XCTest
 
 class PrimaryButtonTests: XCTestCase {
     func testBasics() {
@@ -16,7 +16,7 @@ class PrimaryButtonTests: XCTestCase {
             XCTAssert(model.secondaryButton.waitForExistence(timeout: 5))
         }
     }
-    
+
     func testPrimaryButtonTapAction() {
         launch(scenario: ButtonScenario.self) { app in
             let model = PrimaryButtonModel(app: app)

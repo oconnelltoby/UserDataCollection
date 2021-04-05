@@ -1,6 +1,6 @@
 //
 //  UIViewController.swift
-//  
+//
 //
 //  Created by Toby O'Connell on 27/03/2021.
 //
@@ -14,7 +14,7 @@ extension UIViewController {
         child.view.removeFromSuperview()
         child.removeFromParent()
     }
-    
+
     func add(child: UIViewController) {
         addChild(child)
         view.addFillingSubview(child.view)

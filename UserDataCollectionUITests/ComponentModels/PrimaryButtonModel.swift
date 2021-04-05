@@ -5,17 +5,16 @@
 //  Created by Toby O'Connell on 03/04/2021.
 //
 
-
-import XCTest
 import Scenarios
+import XCTest
 
 struct PrimaryButtonModel {
     var app: XCUIApplication
-    
+
     var primaryButton: XCUIElement {
         app.staticTexts[ButtonScenario.primaryButtonTitle]
     }
-    
+
     var primaryButtonAlertTitle: XCUIElement {
         app.staticTexts[ButtonScenario.primaryButtonAlertTitle]
     }
