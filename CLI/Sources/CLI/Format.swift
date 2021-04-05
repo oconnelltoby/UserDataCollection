@@ -15,15 +15,12 @@ struct Format: ParsableCommand {
     
     @Argument(help: "Path to code that should be formatted")
     var path: String
-    
-    @Argument(help: "Swift version used by swiftformat for version-specific formatting")
-    var swiftVersion: String
 
     @Flag(help: "If true, lint and report errors rather that running fix")
     var lint = false
 
     func run() throws {
         let lintFlag = lint ? " --lint" : ""
-        try shell("swift run swiftformat \(path) --swiftversion \(swiftVersion)\(lintFlag)")
+        try shell("swift run swiftformat \(path)\(lintFlag)")
     }
 }
