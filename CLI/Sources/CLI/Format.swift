@@ -19,7 +19,11 @@ struct Format: ParsableCommand {
     @Argument(help: "Swift version used by swiftformat for version-specific formatting")
     var swiftVersion: String
 
+    @Flag(help: "If true, lint and report errors rather that running fix")
+    var lint = false
+
     func run() throws {
-        try shell("swift run swiftformat \(path) --swiftversion \(swiftVersion)")
+        let lintFlag = lint ? " --lint" : ""
+        try shell("swift run swiftformat \(path) --swiftversion \(swiftVersion)\(lintFlag)")
     }
 }
