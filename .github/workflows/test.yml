@@ -1,0 +1,27 @@
+name: UserDataCollection CI
+
+on:
+  workflow_dispatch: # This allows you to manually run the workflow from GitHub's web UI
+  pull_request:
+    branches: [ '*' ] # This means this workflow will run when any PR is created or any changes are pushed to a PR, on any branch
+
+jobs:
+  test:
+    name: Run tests on Xcode 12.0.1, iOS 14.0, iPhone 11 Pro Max
+    runs-on: macOS-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Set Xcode version to 12.0.1
+        run: sudo xcode-select -switch /Applications/Xcode_12.0.1.app
+      - name: Build for testing
+        run: xcodebuild build-for-testing -project UserDataCollection.xcodeproj -scheme UserDataCollection -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=14.0'
+      - name: Test on iPhone 11 Pro Max
+        run: xcodebuild test-without-building -project UserDataCollection.xcodeproj -scheme UserDataCollection -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=14.0' -resultBundlePath TextResults.xcresult
+      - name: Archive tests results
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: TextResults.xcresult
+          path: TextResults.xcresult
