@@ -1,8 +1,5 @@
 //
-//  Path+Item.swift
-//
-//
-//  Created by Toby O'Connell on 27/03/2021.
+// Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
 extension Array where Element == HierarchyViewController.Item {

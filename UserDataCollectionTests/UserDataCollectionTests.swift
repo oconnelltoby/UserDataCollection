@@ -1,12 +1,9 @@
 //
-//  UserDataCollectionTests.swift
-//  UserDataCollectionTests
-//
-//  Created by Toby O'Connell on 27/03/2021.
+// Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
-@testable import UserDataCollection
 import XCTest
+@testable import UserDataCollection
 
 class UserDataCollectionTests: XCTestCase {
     override func setUpWithError() throws {

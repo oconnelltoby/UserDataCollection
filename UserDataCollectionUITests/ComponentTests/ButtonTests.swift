@@ -1,8 +1,5 @@
 //
-//  PrimaryButtonTests.swift
-//  UserDataCollectionUITests
-//
-//  Created by Toby O'Connell on 31/03/2021.
+// Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
 import Scenarios

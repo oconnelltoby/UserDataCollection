@@ -1,8 +1,5 @@
 //
-//  TemplateView.swift
-//
-//
-//  Created by Toby O'Connell on 03/04/2021.
+// Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
 import UIKit
@@ -37,11 +34,11 @@ public class TemplateView: UIView {
             safeAreaLayoutGuide.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-
+            
             leadingAnchor.constraint(equalTo: blurView.leadingAnchor),
             trailingAnchor.constraint(equalTo: blurView.trailingAnchor),
             bottomAnchor.constraint(equalTo: blurView.bottomAnchor),
-
+            
             footerStackView.leadingAnchor.constraint(equalTo: readableContentGuide.leadingAnchor),
             footerStackView.trailingAnchor.constraint(equalTo: readableContentGuide.trailingAnchor),
             footerStackView.topAnchor.constraint(equalTo: blurView.topAnchor, constant: .standardSpacing),

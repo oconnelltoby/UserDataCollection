@@ -1,8 +1,5 @@
 //
-//  AppDelegate.swift
-//  UserDataCollection
-//
-//  Created by Toby O'Connell on 27/03/2021.
+// Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
 import UIKit

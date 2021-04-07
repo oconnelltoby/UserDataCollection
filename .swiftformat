@@ -1,8 +1,11 @@
-# file options
+# format options
 
 --exclude **/.build
 --swiftversion 5.2
+--header "\nCopyright © 2021 Toby O'Connell. All rights reserved.\n"
 
 # rules
 
-# format options
+--trimwhitespace nonblank-lines
+--importgrouping testable-bottom
+--wraparguments before-first

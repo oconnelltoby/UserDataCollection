@@ -1,8 +1,5 @@
 //
-//  Lint.swift
-//
-//
-//  Created by Toby O'Connell on 04/04/2021.
+// Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
 import ArgumentParser
