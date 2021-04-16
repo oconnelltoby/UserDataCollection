@@ -42,8 +42,18 @@ public class TemplateView: UIView {
             footerStackView.leadingAnchor.constraint(equalTo: readableContentGuide.leadingAnchor),
             footerStackView.trailingAnchor.constraint(equalTo: readableContentGuide.trailingAnchor),
             footerStackView.topAnchor.constraint(equalTo: blurView.topAnchor, constant: .standardSpacing),
-            footerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -.standardSpacing),
         ])
+
+        let bottomConstraint = footerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -.standardSpacing)
+        bottomConstraint.isActive = true
+        bottomConstraint.priority = .defaultHigh
+
+        let keyboardConstraint = footerStackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor)
+        keyboardConstraint.isActive = true
+
+        observeKeyboardHeight { height in
+            keyboardConstraint.constant = -.standardSpacing - height
+        }
     }
 
     private func setBlurTransparent() {
