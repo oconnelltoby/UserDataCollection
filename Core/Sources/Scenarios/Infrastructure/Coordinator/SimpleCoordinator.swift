@@ -6,7 +6,7 @@ import Integration
 import UIKit
 
 class SimpleCoordinator: Coordinating {
-    let navigationController = UINavigationController()
+    let navigationController = UINavigationController().styleAsStandard()
 
     private var rootViewController: UIViewController
 

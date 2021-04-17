@@ -16,7 +16,7 @@ public class ScenarioAppController: AppControlling {
         shortcutManager.addShortcuts()
     }
 
-    private let naviagtionController = UINavigationController()
+    private let naviagtionController = UINavigationController().styleAsStandard()
     private lazy var coordinator = ScenarioCoordinator(navigationController: naviagtionController)
 
     public var rootViewController: UIViewController {

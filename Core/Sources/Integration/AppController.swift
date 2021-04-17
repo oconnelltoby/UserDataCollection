@@ -9,7 +9,7 @@ public protocol AppControlling {
 }
 
 public class AppController: AppControlling {
-    private let naviagtionController = UINavigationController()
+    private let naviagtionController = UINavigationController().styleAsStandard()
     private lazy var coordinator = RootCoordinator(navigationController: naviagtionController)
 
     public var rootViewController: UIViewController {
