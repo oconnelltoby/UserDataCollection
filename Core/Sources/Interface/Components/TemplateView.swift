@@ -8,12 +8,14 @@ public class TemplateView: UIView {
     let footerStackView: UIView
 
     let scrollView: UIScrollView
-    let blurView: UIVisualEffectView
+    let topBlurView: UIVisualEffectView
+    let bottomBlurView: UIVisualEffectView
 
     public init(scrolling: StackContentProvider, footer: StackContentProvider) {
         footerStackView = UIStackView().addContent(from: footer).styleAsStandard()
         scrollView = UIScrollView(contentProvider: scrolling)
-        blurView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+        topBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+        bottomBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
 
         super.init(frame: .zero)
         backgroundColor = UIColor(.background)
@@ -24,24 +26,30 @@ public class TemplateView: UIView {
 
     private func addSubviews() {
         addAutoLayoutSubview(scrollView)
-        addAutoLayoutSubview(blurView)
-        blurView.contentView.addAutoLayoutSubview(footerStackView)
+        addAutoLayoutSubview(topBlurView)
+        addAutoLayoutSubview(bottomBlurView)
+        bottomBlurView.contentView.addAutoLayoutSubview(footerStackView)
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            safeAreaLayoutGuide.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            topBlurView.topAnchor.constraint(equalTo: topAnchor),
+            topBlurView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            topBlurView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            topBlurView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            topAnchor.constraint(equalTo: scrollView.topAnchor),
             safeAreaLayoutGuide.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             
-            leadingAnchor.constraint(equalTo: blurView.leadingAnchor),
-            trailingAnchor.constraint(equalTo: blurView.trailingAnchor),
-            bottomAnchor.constraint(equalTo: blurView.bottomAnchor),
+            leadingAnchor.constraint(equalTo: bottomBlurView.leadingAnchor),
+            trailingAnchor.constraint(equalTo: bottomBlurView.trailingAnchor),
+            bottomAnchor.constraint(equalTo: bottomBlurView.bottomAnchor),
             
             footerStackView.leadingAnchor.constraint(equalTo: readableContentGuide.leadingAnchor),
             footerStackView.trailingAnchor.constraint(equalTo: readableContentGuide.trailingAnchor),
-            footerStackView.topAnchor.constraint(equalTo: blurView.topAnchor, constant: .standardSpacing),
+            footerStackView.topAnchor.constraint(equalTo: bottomBlurView.topAnchor, constant: .standardSpacing),
         ])
 
         let bottomConstraint = footerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -.standardSpacing)
@@ -57,13 +65,14 @@ public class TemplateView: UIView {
     }
 
     private func setBlurTransparent() {
-        blurView.subviews.forEach {
-            $0.backgroundColor = .clear
-        }
+        [topBlurView, bottomBlurView]
+            .flatMap(\.subviews).forEach {
+                $0.backgroundColor = .clear
+            }
     }
 
     private func makeSpaceForFooter() {
-        scrollView.contentInset.bottom = blurView.bounds.height
+        scrollView.contentInset.bottom = bottomBlurView.bounds.height
     }
 
     override public func layoutSubviews() {
