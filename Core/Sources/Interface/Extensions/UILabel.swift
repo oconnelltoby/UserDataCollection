@@ -24,4 +24,18 @@ public extension UILabel {
         textAlignment = .center
         return self
     }
+
+    @discardableResult
+    func styleAsHeader() -> Self {
+        accessibilityTraits.insert(.header)
+        return self
+    }
+
+    static func body(_ text: String) -> UILabel {
+        UILabel().styleAsDyanmicText(.body).addText(text)
+    }
+
+    static func heading(_ text: String) -> UILabel {
+        UILabel().styleAsDyanmicText(.title1).styleAsHeader().addText(text)
+    }
 }

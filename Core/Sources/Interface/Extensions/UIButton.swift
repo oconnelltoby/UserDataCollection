@@ -40,4 +40,8 @@ public extension UIButton {
         setTitle(title, for: .normal)
         return self
     }
+
+    static func primary(_ title: String) -> UIButton {
+        UIButton().styleAsPrimary().addTitle(title)
+    }
 }
