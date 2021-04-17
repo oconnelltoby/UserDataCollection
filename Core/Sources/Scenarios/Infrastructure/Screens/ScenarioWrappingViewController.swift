@@ -28,7 +28,9 @@ class ScenarioWrappingViewController: WrappingViewController {
                 let viewController = try ScenarioListViewController { [weak self] id in
                     self?.activeScenarioID = id
                 }
-                content = viewController
+                let navigationController = UINavigationController(rootViewController: viewController)
+                navigationController.navigationBar.prefersLargeTitles = true
+                content = navigationController
             } catch {
                 print(error)
             }

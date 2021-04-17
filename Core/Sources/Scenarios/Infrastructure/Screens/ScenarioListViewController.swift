@@ -12,5 +12,7 @@ class ScenarioListViewController: HierarchyViewController {
                 try items.insert(scenarioID.scenarioType.path, action: select)
             }
         super.init(items: items)
+
+        title = "Scenarios"
     }
 }
