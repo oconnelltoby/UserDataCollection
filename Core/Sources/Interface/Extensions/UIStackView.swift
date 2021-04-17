@@ -54,4 +54,11 @@ public extension UIStackView {
         alignment = .fill
         return self
     }
+
+    func styleAsRow() -> Self {
+        axis = .horizontal
+        alignment = .center
+        spacing = .standardSpacing
+        return self
+    }
 }
