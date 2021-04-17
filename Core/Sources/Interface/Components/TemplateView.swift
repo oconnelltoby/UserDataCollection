@@ -12,7 +12,7 @@ public class TemplateView: UIView {
     let bottomBlurView: UIVisualEffectView
 
     public init(scrolling: StackContentProvider, footer: StackContentProvider) {
-        footerStackView = UIStackView().addContent(from: footer).styleAsStandard()
+        footerStackView = UIStackView().addContent(from: footer).styleAsStandard(spacing: .doubleSpacing)
         scrollView = UIScrollView(contentProvider: scrolling)
         topBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
         bottomBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))

@@ -5,6 +5,7 @@
 import UIKit
 
 public extension CGFloat {
+    static let doubleSpacing: CGFloat = standardSpacing * 2
     static let standardSpacing: CGFloat = 16
     static let halfSpacing: CGFloat = standardSpacing / 2
 

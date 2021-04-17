@@ -48,9 +48,9 @@ public extension UIStackView {
     }
 
     @discardableResult
-    func styleAsStandard() -> Self {
+    func styleAsStandard(spacing: CGFloat = .standardSpacing) -> Self {
         axis = .vertical
-        spacing = .standardSpacing
+        self.spacing = spacing
         alignment = .fill
         return self
     }
