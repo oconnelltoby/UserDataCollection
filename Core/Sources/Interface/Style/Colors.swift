@@ -9,6 +9,7 @@ public enum ColorName: String, CaseIterable {
     case accentTeal = "AccentTeal"
     case primaryText = "PrimaryText"
     case background = "Background"
+    case error = "Error"
 }
 
 extension UIColor {
