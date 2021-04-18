@@ -1,0 +1,15 @@
+//
+// Copyright © 2021 Toby O'Connell. All rights reserved.
+//
+
+public enum LocalizationKey: String {
+    case first_name_title
+    case first_name_textfield_placeholder
+    case first_name_heading
+    case first_name_body
+    case first_name_button
+}
+
+extension LocalizationKey: Localizable {
+    var localized: String { rawValue }
+}
