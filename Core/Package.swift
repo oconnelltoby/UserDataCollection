@@ -29,6 +29,9 @@ let package = Package(
             targets: ["Scenarios"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/oconnelltoby/UserDataValidation.git", .branch("master")),
+    ],
     targets: [
         .target(
             name: "Localization",
@@ -39,7 +42,8 @@ let package = Package(
             dependencies: ["Localization"]
         ),
         .target(
-            name: "Domain"
+            name: "Domain",
+            dependencies: ["UserDataValidation"]
         ),
         .target(
             name: "Integration",

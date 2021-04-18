@@ -27,6 +27,15 @@
           "revision": "94630559a4f60be5f043229e367d8d98247fd890",
           "version": "0.47.13"
         }
+      },
+      {
+        "package": "UserDataValidation",
+        "repositoryURL": "https://github.com/oconnelltoby/UserDataValidation.git",
+        "state": {
+          "branch": "master",
+          "revision": "5a5faef8683c9be1e23fd1a784e047be407fc6a2",
+          "version": null
+        }
       }
     ]
   },
