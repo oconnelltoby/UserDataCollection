@@ -7,6 +7,17 @@ import UIKit
 public class TextField: UITextField {
     private let gradientView = BorderGradientView(cornerRadius: .buttonCornerRadius)
 
+    public enum ErrorState {
+        case error
+        case normal
+    }
+
+    public var errorState: ErrorState = .normal {
+        didSet {
+            setBorderColor(isEditing: isEditing, errorState: errorState)
+        }
+    }
+
     public init(text: String? = nil, placeholder: String? = nil) {
         super.init(frame: .zero)
 
@@ -16,9 +27,8 @@ public class TextField: UITextField {
         addAutoLayoutSubview(gradientView)
         constrain(gradientView, to: self)
 
-        layer.borderWidth = 1
         layer.cornerRadius = .buttonCornerRadius
-        setBorderHidden(false)
+        setBorderColor(isEditing: isEditing, errorState: errorState)
 
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontForContentSizeCategory = true
@@ -29,13 +39,25 @@ public class TextField: UITextField {
         tintColor = UIColor(.accentGreen)
     }
 
-    private func setBorderHidden(_ hide: Bool) {
-        layer.borderColor = hide ? UIColor.clear.cgColor : UIColor(.primaryText).cgColor
+    private func setBorderColor(isEditing: Bool, errorState: ErrorState) {
+        switch (isEditing, errorState) {
+        case (true, .normal):
+            gradientView.isHidden = false
+            layer.borderColor = UIColor.clear.cgColor
+            layer.borderWidth = 1
+        case (false, .normal):
+            gradientView.isHidden = true
+            layer.borderColor = UIColor(.primaryText).cgColor
+            layer.borderWidth = 1
+        case (_, .error):
+            gradientView.isHidden = true
+            layer.borderColor = UIColor(.error).cgColor
+            layer.borderWidth = 2
+        }
     }
 
     override public var isEditing: Bool {
-        gradientView.isHidden = !super.isEditing
-        setBorderHidden(super.isEditing)
+        setBorderColor(isEditing: super.isEditing, errorState: errorState)
         return super.isEditing
     }
 
