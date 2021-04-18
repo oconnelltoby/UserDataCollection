@@ -1,1 +1,6 @@
-
+"first_name_title" = "Your details";
+"first_name_textfield_placeholder" = "First name";
+"first_name_heading" = "First name";
+"first_name_body" = "Please enter your first name";
+"first_name_button" = "Continue";
+"first_name_info" = "Your name should be between %d and %d characters";
