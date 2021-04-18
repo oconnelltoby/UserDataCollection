@@ -2,6 +2,7 @@
 // Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
+import Localization
 import UIKit
 
 public class FirstNameViewController: UIViewController {
@@ -10,18 +11,18 @@ public class FirstNameViewController: UIViewController {
     public init() {
         super.init(nibName: nil, bundle: nil)
 
-        let textField = TextField(placeholder: "First name")
+        let textField = TextField(placeholder: localize(.first_name_textfield_placeholder))
         textField.delegate = textFieldDelegate
 
-        let headding = UILabel.heading("First name")
-        let body = UILabel.body("Please enter your first name")
-        let button = UIButton.primary("Next")
+        let headding = UILabel.heading(localize(.first_name_heading))
+        let body = UILabel.body(localize(.first_name_body))
+        let button = UIButton.primary(localize(.first_name_button))
         let infoIcon = UIImageView.icon(systemName: "info.circle")
-        let infoLabel = UILabel.body("Your name should be between 1 and 50 characters")
+        let infoLabel = UILabel.body(localize(.first_name_info(min: 1, max: 50)))
         let infoStack = UIStackView(arrangedSubviews: [infoIcon, infoLabel]).styleAsRow()
 
         view = TemplateView(scrolling: [headding, body, textField, infoStack], footer: button)
-        title = "Your details"
+        title = localize(.first_name_title)
     }
 
     @available(*, unavailable)
