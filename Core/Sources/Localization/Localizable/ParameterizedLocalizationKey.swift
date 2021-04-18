@@ -7,7 +7,7 @@ public enum ParameterizedLocalizationKey {
 }
 
 extension ParameterizedLocalizationKey {
-    enum Key: String {
+    enum Key: String, CaseIterable {
         case first_name_info
     }
 

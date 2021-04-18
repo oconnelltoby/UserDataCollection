@@ -12,7 +12,10 @@ public func localize(_ localizable: LocalizationKey) -> String {
     localize(localizable as Localizable)
 }
 
+func value(forKey key: String, default: String = "") -> String {
+    NSLocalizedString(key, bundle: .module, value: `default`, comment: "")
+}
+
 func localize(_ localizable: Localizable) -> String {
-    let format = NSLocalizedString(localizable.key, bundle: .module, comment: "")
-    return String(format: format, arguments: localizable.arguments)
+    String(format: value(forKey: localizable.key), arguments: localizable.arguments)
 }

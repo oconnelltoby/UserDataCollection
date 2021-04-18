@@ -2,7 +2,7 @@
 // Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
-public enum LocalizationKey: String {
+public enum LocalizationKey: String, CaseIterable {
     case first_name_title
     case first_name_textfield_placeholder
     case first_name_heading
