@@ -14,5 +14,5 @@ public func localize(_ localizable: LocalizationKey) -> String {
 
 func localize(_ localizable: Localizable) -> String {
     let format = NSLocalizedString(localizable.key, bundle: .module, comment: "")
-    return String.localizedStringWithFormat(format, localizable.arguments)
+    return String(format: format, arguments: localizable.arguments)
 }
