@@ -31,7 +31,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Localization"
+            name: "Localization",
+            resources: [.process("Resources")]
         ),
         .target(
             name: "Interface",
