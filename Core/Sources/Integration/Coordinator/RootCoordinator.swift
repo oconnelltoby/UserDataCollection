@@ -13,6 +13,6 @@ struct RootCoordinator: Coordinating {
     }
 
     func start() {
-        navigationController.pushViewController(FirstNameViewController(), animated: false)
+        navigationController.pushViewController(UIViewController(), animated: false)
     }
 }
