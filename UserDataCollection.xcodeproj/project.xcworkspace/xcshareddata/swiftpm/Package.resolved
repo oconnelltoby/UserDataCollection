@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/apple/swift-argument-parser",
         "state": {
           "branch": null,
-          "revision": "831ed5e860a70e745bc1337830af4786b2576881",
-          "version": "0.4.1"
+          "revision": "47bd06ebeff8146ecd0020809e186218b46f465f",
+          "version": "0.4.2"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/nicklockwood/SwiftFormat",
         "state": {
           "branch": null,
-          "revision": "94630559a4f60be5f043229e367d8d98247fd890",
-          "version": "0.47.13"
+          "revision": "01aff6e657da311f1c7d59806ac18293ba5b7e2b",
+          "version": "0.48.0"
         }
       },
       {
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/oconnelltoby/UserDataValidation.git",
         "state": {
           "branch": "master",
-          "revision": "5a5faef8683c9be1e23fd1a784e047be407fc6a2",
+          "revision": "029c7aa5d18bfad330fad6499b13d755d3157c60",
           "version": null
         }
       }
