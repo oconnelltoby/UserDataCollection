@@ -9,8 +9,8 @@ class TextFieldTests: XCTestCase {
     func testBasics() {
         launch(scenario: TextFieldScenario.self) { app in
             let model = TextFieldModel(app: app)
-            model.placeholderTextField.verify()
-            model.textField.verify()
+            model.placeholderTextField.assertExists()
+            model.textField.assertExists()
         }
     }
 }

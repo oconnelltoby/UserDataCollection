@@ -5,11 +5,11 @@
 import XCTest
 
 extension XCUIElement {
-    func verify() {
+    func assertExists() {
         XCTAssert(waitForExistence(timeout: 5))
     }
 
-    func refute() {
+    func assertDoesNotExist() {
         XCTAssertFalse(waitForExistence(timeout: 5))
     }
 }

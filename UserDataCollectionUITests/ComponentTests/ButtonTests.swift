@@ -9,26 +9,26 @@ class PrimaryButtonTests: XCTestCase {
     func testBasics() {
         launch(scenario: ButtonScenario.self) { app in
             let model = PrimaryButtonModel(app: app)
-            model.primaryButton.verify()
-            model.secondaryButton.verify()
+            model.primaryButton.assertExists()
+            model.secondaryButton.assertExists()
         }
     }
 
     func testPrimaryButtonTapAction() {
         launch(scenario: ButtonScenario.self) { app in
             let model = PrimaryButtonModel(app: app)
-            model.primaryButton.verify()
+            model.primaryButton.assertExists()
             model.primaryButton.tap()
-            model.primaryButtonAlertTitle.verify()
+            model.primaryButtonAlertTitle.assertExists()
         }
     }
 
     func testSecondaryButtonTapAction() {
         launch(scenario: ButtonScenario.self) { app in
             let model = PrimaryButtonModel(app: app)
-            model.primaryButton.verify()
+            model.primaryButton.assertExists()
             model.primaryButton.tap()
-            model.primaryButtonAlertTitle.verify()
+            model.primaryButtonAlertTitle.assertExists()
         }
     }
 }

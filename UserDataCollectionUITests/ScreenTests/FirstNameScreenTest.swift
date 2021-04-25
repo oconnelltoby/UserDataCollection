@@ -11,12 +11,12 @@ class FirstNameScreenTests: XCTestCase {
         let scenario = FirstNameSuccessScreenScenario.self
         launch(scenario: scenario) { app in
             let model = FirstNameScreenModel(app: app)
-            model.title.verify()
-            model.textField.verify()
-            model.heading.verify()
-            model.body.verify()
-            model.button.verify()
-            model.firstNameInfo(scenario: scenario).verify()
+            model.title.assertExists()
+            model.textField.assertExists()
+            model.heading.assertExists()
+            model.body.assertExists()
+            model.button.assertExists()
+            model.firstNameInfo(scenario: scenario).assertExists()
         }
     }
 
@@ -28,7 +28,7 @@ class FirstNameScreenTests: XCTestCase {
             model.textField.tap()
             model.textField.typeText(text)
             model.button.tap()
-            model.alert(text: text, scenario: scenario).verify()
+            model.alert(text: text, scenario: scenario).assertExists()
         }
     }
 
@@ -41,8 +41,8 @@ class FirstNameScreenTests: XCTestCase {
 
             model.textField.tap()
             model.textField.typeText(text)
-            app.textFields[text].refute()
-            app.textFields[String(text.prefix(maxLength))].verify()
+            app.textFields[text].assertDoesNotExist()
+            app.textFields[String(text.prefix(maxLength))].assertExists()
         }
     }
 }
