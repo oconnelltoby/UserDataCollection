@@ -29,7 +29,7 @@ public class FirstNameViewController: UIViewController {
         let infoIcon = UIImageView.icon(systemName: "info.circle")
         let infoLabel = UILabel.body(localize(.first_name_info(min: viewModel.minLength, max: viewModel.maxLength)))
         let infoStack = UIStackView(arrangedSubviews: [infoIcon, infoLabel]).styleAsRow()
-        let textField = TextField(placeholder: localize(.first_name_textfield_placeholder)).withDelegate(textFieldDelegate)
+        let textField = TextField(placeholder: localize(.first_name_textfield_placeholder)).withDelegate(textFieldDelegate.capAt(length: viewModel.maxLength))
         let button = UIButton.primary(localize(.first_name_button)).addAction {
             switch viewModel.validate(textField.text ?? "") {
             case .success:
@@ -40,7 +40,8 @@ public class FirstNameViewController: UIViewController {
         }
 
         let action = UIAction { [weak textField] _ in
-            textField?.errorState = .normal
+            guard let textField = textField else { return }
+            textField.errorState = .normal
         }
         textField.addAction(action, for: .editingChanged)
 
