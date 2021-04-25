@@ -8,4 +8,8 @@ extension XCUIElement {
     func verify() {
         XCTAssert(waitForExistence(timeout: 5))
     }
+
+    func refute() {
+        XCTAssertFalse(waitForExistence(timeout: 5))
+    }
 }
