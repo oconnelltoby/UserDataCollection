@@ -9,8 +9,8 @@ class TextFieldTests: XCTestCase {
     func testBasics() {
         launch(scenario: TextFieldScenario.self) { app in
             let model = TextFieldModel(app: app)
-            XCTAssert(model.placeholderTextField.waitForExistence(timeout: 5))
-            XCTAssert(model.textField.waitForExistence(timeout: 5))
+            model.placeholderTextField.verify()
+            model.textField.verify()
         }
     }
 }

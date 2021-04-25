@@ -9,26 +9,26 @@ class PrimaryButtonTests: XCTestCase {
     func testBasics() {
         launch(scenario: ButtonScenario.self) { app in
             let model = PrimaryButtonModel(app: app)
-            XCTAssert(model.primaryButton.waitForExistence(timeout: 5))
-            XCTAssert(model.secondaryButton.waitForExistence(timeout: 5))
+            model.primaryButton.verify()
+            model.secondaryButton.verify()
         }
     }
 
     func testPrimaryButtonTapAction() {
         launch(scenario: ButtonScenario.self) { app in
             let model = PrimaryButtonModel(app: app)
-            XCTAssert(model.primaryButton.waitForExistence(timeout: 5))
+            model.primaryButton.verify()
             model.primaryButton.tap()
-            XCTAssert(model.primaryButtonAlertTitle.waitForExistence(timeout: 5))
+            model.primaryButtonAlertTitle.verify()
         }
     }
 
     func testSecondaryButtonTapAction() {
         launch(scenario: ButtonScenario.self) { app in
             let model = PrimaryButtonModel(app: app)
-            XCTAssert(model.primaryButton.waitForExistence(timeout: 5))
+            model.primaryButton.verify()
             model.primaryButton.tap()
-            XCTAssert(model.primaryButtonAlertTitle.waitForExistence(timeout: 5))
+            model.primaryButtonAlertTitle.verify()
         }
     }
 }

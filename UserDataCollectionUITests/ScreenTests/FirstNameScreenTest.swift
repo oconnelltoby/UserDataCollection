@@ -11,12 +11,12 @@ class FirstNameScreenTests: XCTestCase {
         let scenario = FirstNameSuccessScreenScenario.self
         launch(scenario: scenario) { app in
             let model = FirstNameScreenModel(app: app)
-            XCTAssert(model.title.waitForExistence(timeout: 5))
-            XCTAssert(model.textField.waitForExistence(timeout: 5))
-            XCTAssert(model.heading.waitForExistence(timeout: 5))
-            XCTAssert(model.body.waitForExistence(timeout: 5))
-            XCTAssert(model.button.waitForExistence(timeout: 5))
-            XCTAssert(model.firstNameInfo(scenario: scenario).waitForExistence(timeout: 5))
+            model.title.verify()
+            model.textField.verify()
+            model.heading.verify()
+            model.body.verify()
+            model.button.verify()
+            model.firstNameInfo(scenario: scenario).verify()
         }
     }
 
@@ -28,7 +28,7 @@ class FirstNameScreenTests: XCTestCase {
             model.textField.tap()
             model.textField.typeText(text)
             model.button.tap()
-            XCTAssert(model.alert(text: text, scenario: scenario).waitForExistence(timeout: 5))
+            model.alert(text: text, scenario: scenario).verify()
         }
     }
 }
