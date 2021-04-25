@@ -9,6 +9,10 @@ let package = Package(
     ],
     products: [
         .library(
+            name: "Common",
+            targets: ["Common"]
+        ),
+        .library(
             name: "Localization",
             targets: ["Localization"]
         ),
@@ -34,24 +38,27 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "Common"
+        ),
+        .target(
             name: "Localization",
             resources: [.process("Resources")]
         ),
         .target(
             name: "Interface",
-            dependencies: ["Localization"]
+            dependencies: ["Common", "Localization"]
         ),
         .target(
             name: "Domain",
-            dependencies: ["UserDataValidation"]
+            dependencies: ["Common", "UserDataValidation"]
         ),
         .target(
             name: "Integration",
-            dependencies: ["Localization", "Domain", "Interface"]
+            dependencies: ["Common", "Localization", "Domain", "Interface"]
         ),
         .target(
             name: "Scenarios",
-            dependencies: ["Interface", "Integration"]
+            dependencies: ["Common", "Interface", "Integration"]
         ),
         .testTarget(
             name: "DomainTests",
