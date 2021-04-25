@@ -32,6 +32,10 @@ let package = Package(
             name: "Scenarios",
             targets: ["Scenarios"]
         ),
+        .library(
+            name: "TestSupport",
+            targets: ["TestSupport"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/oconnelltoby/UserDataValidation.git", .branch("master")),
@@ -60,25 +64,28 @@ let package = Package(
             name: "Scenarios",
             dependencies: ["Common", "Interface", "Integration"]
         ),
+        .target(
+            name: "TestSupport"
+        ),
         .testTarget(
             name: "DomainTests",
-            dependencies: ["Domain", "Scenarios"]
+            dependencies: ["TestSupport", "Domain", "Scenarios"]
         ),
         .testTarget(
             name: "IntegrationTests",
-            dependencies: ["Integration", "Scenarios"]
+            dependencies: ["TestSupport", "Integration", "Scenarios"]
         ),
         .testTarget(
             name: "InterfaceTests",
-            dependencies: ["Interface"]
+            dependencies: ["TestSupport", "Interface"]
         ),
         .testTarget(
             name: "ScenariosTests",
-            dependencies: ["Scenarios"]
+            dependencies: ["TestSupport", "Scenarios"]
         ),
         .testTarget(
             name: "LocalizationTests",
-            dependencies: ["Localization"]
+            dependencies: ["TestSupport", "Localization"]
         ),
     ]
 )

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10A73672635BFE700C8B834 /* TestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F10A73662635BFE700C8B834 /* TestSupport */; };
 		F149459526108D0B00F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149459426108D0B00F67667 /* SceneDelegate.swift */; };
 		F149459A26108D1000F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149458E26108D0300F67667 /* SceneDelegate.swift */; };
 		F157B6AB2611325200B9C3C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F157B6AA2611325200B9C3C3 /* Colors.xcassets */; };
@@ -115,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10A73672635BFE700C8B834 /* TestSupport in Frameworks */,
 				F1E871C32618693B000F89A0 /* Scenarios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +420,7 @@
 			name = UserDataCollectionUITests;
 			packageProductDependencies = (
 				F1E871C22618693B000F89A0 /* Scenarios */,
+				F10A73662635BFE700C8B834 /* TestSupport */,
 			);
 			productName = UserDataCollectionUITests;
 			productReference = F1FE1A2B260F2EEF00FA249E /* UserDataCollectionUITests.xctest */;
@@ -692,6 +695,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F10A73662635BFE700C8B834 /* TestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TestSupport;
+		};
 		F1D902B6260F9320007D4906 /* Scenarios */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Scenarios;
