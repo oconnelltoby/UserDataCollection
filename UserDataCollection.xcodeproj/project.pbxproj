@@ -16,6 +16,8 @@
 		F1A5BC2F260F8EF0001EB451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A18260F2EEE00FA249E /* LaunchScreen.storyboard */; };
 		F1A5BC30260F8EF0001EB451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FE1A16260F2EEE00FA249E /* Assets.xcassets */; };
 		F1A5BC52260F9033001EB451 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A5BC4D260F8F87001EB451 /* AppIcon.xcassets */; };
+		F1B50D8C2635800900F800BF /* FirstNameScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B50D8B2635800900F800BF /* FirstNameScreenTest.swift */; };
+		F1B50D972635809300F800BF /* FirstNameScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B50D962635809300F800BF /* FirstNameScreenModel.swift */; };
 		F1B50DA1263580DE00F800BF /* XCUIElementQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B50DA0263580DE00F800BF /* XCUIElementQuery.swift */; };
 		F1C70C732621F74C001458D5 /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70C722621F74C001458D5 /* TextFieldTests.swift */; };
 		F1C70C792621F7A1001458D5 /* TextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70C782621F7A1001458D5 /* TextFieldModel.swift */; };
@@ -69,6 +71,8 @@
 		F1A5BC00260F8C81001EB451 /* UserDataCollectionUITests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UserDataCollectionUITests.xcconfig; sourceTree = "<group>"; };
 		F1A5BC34260F8EF0001EB451 /* UserDataCollectionInternal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDataCollectionInternal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5BC4D260F8F87001EB451 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		F1B50D8B2635800900F800BF /* FirstNameScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameScreenTest.swift; sourceTree = "<group>"; };
+		F1B50D962635809300F800BF /* FirstNameScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameScreenModel.swift; sourceTree = "<group>"; };
 		F1B50DA0263580DE00F800BF /* XCUIElementQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementQuery.swift; sourceTree = "<group>"; };
 		F1C70C722621F74C001458D5 /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
 		F1C70C782621F7A1001458D5 /* TextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModel.swift; sourceTree = "<group>"; };
@@ -236,6 +240,22 @@
 			path = Production;
 			sourceTree = "<group>";
 		};
+		F1B50D8A26357FF400F800BF /* ScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1B50D8B2635800900F800BF /* FirstNameScreenTest.swift */,
+			);
+			path = ScreenTests;
+			sourceTree = "<group>";
+		};
+		F1B50D952635808100F800BF /* ScreenModels */ = {
+			isa = PBXGroup;
+			children = (
+				F1B50D962635809300F800BF /* FirstNameScreenModel.swift */,
+			);
+			path = ScreenModels;
+			sourceTree = "<group>";
+		};
 		F1E871ED26186AC9000F89A0 /* ComponentModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +342,8 @@
 				F1E8720C2618F234000F89A0 /* Helper */,
 				F1E871ED26186AC9000F89A0 /* ComponentModels */,
 				F1E871EF26186AC9000F89A0 /* ComponentTests */,
+				F1B50D952635808100F800BF /* ScreenModels */,
+				F1B50D8A26357FF400F800BF /* ScreenTests */,
 				F1A5BBFF260F8C48001EB451 /* Configurations */,
 			);
 			path = UserDataCollectionUITests;
@@ -546,6 +568,8 @@
 				F1E871F326186AC9000F89A0 /* ButtonTests.swift in Sources */,
 				F1B50DA1263580DE00F800BF /* XCUIElementQuery.swift in Sources */,
 				F1E871F126186AC9000F89A0 /* XCTestCase.swift in Sources */,
+				F1B50D8C2635800900F800BF /* FirstNameScreenTest.swift in Sources */,
+				F1B50D972635809300F800BF /* FirstNameScreenModel.swift in Sources */,
 				F1C70C792621F7A1001458D5 /* TextFieldModel.swift in Sources */,
 				F1C70C732621F74C001458D5 /* TextFieldTests.swift in Sources */,
 			);
