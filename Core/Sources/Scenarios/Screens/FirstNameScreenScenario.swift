@@ -2,17 +2,17 @@
 // Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
+import Common
 import Integration
 import Interface
 import UIKit
 import UserDataValidation
-import Common
 
-protocol FirstNameScreenScenario: Scenario {
+public protocol FirstNameScreenScenario: Scenario {
     static var result: Result<Void, Error> { get }
 }
 
-extension FirstNameScreenScenario {
+public extension FirstNameScreenScenario {
     static var minLength: UInt { 2 }
     static var maxLength: UInt { 10 }
 
@@ -43,13 +43,13 @@ extension FirstNameScreenScenario {
     }
 }
 
-class FirstNameSuccessScreenScenario: FirstNameScreenScenario {
-    static var path = Path("Prototype Screens", "First Name", "Success")
-    static let result: Result<Void, Error> = .success
+public class FirstNameSuccessScreenScenario: FirstNameScreenScenario {
+    public static var path = Path("Prototype Screens", "First Name", "Success")
+    public static let result: Result<Void, Error> = .success
 }
 
-class FirstNameFailureScreenScenario: FirstNameScreenScenario {
-    static var path = Path("Prototype Screens", "First Name", "Failure")
+public class FirstNameFailureScreenScenario: FirstNameScreenScenario {
+    public static var path = Path("Prototype Screens", "First Name", "Failure")
     struct TestError: Error {}
-    static let result: Result<Void, Error> = .failure(TestError())
+    public static let result: Result<Void, Error> = .failure(TestError())
 }
