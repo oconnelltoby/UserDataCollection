@@ -19,11 +19,11 @@ extension ParameterizedLocalizationKey {
 }
 
 extension ParameterizedLocalizationKey: Localizable {
-    var key: String {
+    public var key: String {
         getKey().rawValue
     }
 
-    var arguments: [CVarArg] {
+    public var arguments: [CVarArg] {
         switch self {
         case let .first_name_info(min, max):
             return [min, max]
