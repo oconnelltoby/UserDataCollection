@@ -9,7 +9,7 @@ import XCTest
 
 class FirstNameViewModelTests: XCTestCase {
     var validator: MockValidator!
-    var viewModel: NameViewModel!
+    var viewModel: FirstNameViewModel!
     var storedFirstName: FirstNameModel?
 
     override func setUp() {
@@ -20,7 +20,7 @@ class FirstNameViewModelTests: XCTestCase {
             nameLength: 0 ... .max
         )
 
-        viewModel = NameViewModel(
+        viewModel = FirstNameViewModel(
             validator: validator,
             store: { [weak self] in
                 self?.storedFirstName = $0

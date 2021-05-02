@@ -6,7 +6,7 @@ import Common
 import Interface
 import UserDataValidation
 
-extension NameViewModel {
+extension FirstNameViewModel {
     init(validator: FirstNameValidating, store: @escaping (FirstNameModel) -> Void) {
         self.init(
             minLength: validator.nameLength.lowerBound,

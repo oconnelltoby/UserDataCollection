@@ -2,17 +2,25 @@
 // Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
-import Localization
 import UIKit
 import UserDataValidation
 
-public struct NameViewModel {
-    var minLength: UInt
+struct NameViewModel {
+    public struct Labels {
+        var title: String
+        var heading: String
+        var body: String
+        var info: String
+        var button: String
+        var textField: String
+    }
+    
+    var labels: Labels
     var maxLength: UInt
     var validate: (_ name: String) -> Result<Void, Error>
 
-    public init(minLength: UInt, maxLength: UInt, validate: @escaping (_ name: String) -> Result<Void, Error>) {
-        self.minLength = minLength
+    init(labels: Labels, maxLength: UInt, validate: @escaping (_ name: String) -> Result<Void, Error>) {
+        self.labels = labels
         self.maxLength = maxLength
         self.validate = validate
     }
@@ -21,22 +29,22 @@ public struct NameViewModel {
 public class NameViewController: UIViewController {
     private lazy var textFieldDelegate = TextFieldDelegate().resignOnReturn().capAt(length: viewModel.maxLength)
     private let viewModel: NameViewModel
-    private let headding = UILabel.heading(.first_name_heading)
-    private let body = UILabel.body(.first_name_body)
+    private lazy var heading = UILabel.heading(viewModel.labels.heading)
+    private lazy var body = UILabel.body(viewModel.labels.body)
     private let infoIcon = UIImageView.icon(systemName: "info.circle")
-    private lazy var infoLabel = UILabel.body(.first_name_info(min: viewModel.minLength, max: viewModel.maxLength))
+    private lazy var infoLabel = UILabel.body(viewModel.labels.info)
     private lazy var infoStack = UIStackView(arrangedSubviews: [infoIcon, infoLabel]).styleAsRow()
-    private lazy var textField = TextField(placeholder: localize(.first_name_textfield_placeholder)).withDelegate(textFieldDelegate)
-    private let button = UIButton.primary(localize(.first_name_button))
+    private lazy var textField = TextField(placeholder: viewModel.labels.textField).withDelegate(textFieldDelegate)
+    private lazy var button = UIButton.primary(viewModel.labels.button)
 
-    public init(viewModel: NameViewModel) {
+    init(viewModel: NameViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
         setupActions()
 
-        view = TemplateView(scrolling: [headding, body, infoStack, textField], footer: button)
-        title = localize(.first_name_title)
+        view = TemplateView(scrolling: [heading, body, infoStack, textField], footer: button)
+        title = viewModel.labels.title
     }
     
     private func setupActions() {
