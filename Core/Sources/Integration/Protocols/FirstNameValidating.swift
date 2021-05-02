@@ -2,6 +2,7 @@
 // Copyright © 2021 Toby O'Connell. All rights reserved.
 //
 
+import Domain
 import UserDataValidation
 
 public protocol FirstNameValidating {

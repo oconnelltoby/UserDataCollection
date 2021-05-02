@@ -3,6 +3,7 @@
 //
 
 import Common
+import Domain
 import Interface
 import UserDataValidation
 
