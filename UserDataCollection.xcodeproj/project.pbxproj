@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11E167263EABE500911614 /* LastNameScreenModel.swift */; };
+		DD11E176263EAC4300911614 /* LastNameScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11E175263EAC4300911614 /* LastNameScreenTests.swift */; };
 		F10A73672635BFE700C8B834 /* TestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F10A73662635BFE700C8B834 /* TestSupport */; };
 		F10A73752635C5D800C8B834 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10A73742635C5D800C8B834 /* XCUIElement.swift */; };
 		F149459526108D0B00F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149459426108D0B00F67667 /* SceneDelegate.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD11E167263EABE500911614 /* LastNameScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameScreenModel.swift; sourceTree = "<group>"; };
+		DD11E175263EAC4300911614 /* LastNameScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameScreenTests.swift; sourceTree = "<group>"; };
 		F101CA4D261D0C5000D9EB3A /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 		F101CA52261D0D2C00D9EB3A /* AllTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AllTests.xctestplan; sourceTree = "<group>"; };
 		F10A73742635C5D800C8B834 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		F1B50D8A26357FF400F800BF /* ScreenTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD11E175263EAC4300911614 /* LastNameScreenTests.swift */,
 				F1B50D8B2635800900F800BF /* FirstNameScreenTests.swift */,
 			);
 			path = ScreenTests;
@@ -253,6 +258,7 @@
 		F1B50D952635808100F800BF /* ScreenModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD11E167263EABE500911614 /* LastNameScreenModel.swift */,
 				F1B50D962635809300F800BF /* FirstNameScreenModel.swift */,
 			);
 			path = ScreenModels;
@@ -568,6 +574,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1E871F226186AC9000F89A0 /* PrimaryButtonModel.swift in Sources */,
+				DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */,
+				DD11E176263EAC4300911614 /* LastNameScreenTests.swift in Sources */,
 				F1E871F326186AC9000F89A0 /* ButtonTests.swift in Sources */,
 				F1B50DA1263580DE00F800BF /* XCUIElementQuery.swift in Sources */,
 				F1E871F126186AC9000F89A0 /* XCTestCase.swift in Sources */,
