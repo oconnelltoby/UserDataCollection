@@ -11,6 +11,10 @@ public protocol LastNameValidating {
 }
 
 extension LastNameValidator: LastNameValidating {
+    public init(configuration: Configuration) {
+        self.init(nameLength: configuration.validators.lastName.nameLength)
+    }
+    
     public func makeLastName(input: String) -> Result<LastNameModel, LastNameError> {
         let result: Result<LastName, LastNameError> = makeLastName(input: input)
         return result.map { $0 as LastNameModel }

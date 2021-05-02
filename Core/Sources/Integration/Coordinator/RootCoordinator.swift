@@ -17,10 +17,12 @@ extension RootCoordinator {
 struct RootCoordinator: Coordinating {
     private var initialState: State
     var navigationController: UINavigationController
+    private let configuration: Configuration
 
-    init(initialState: State, navigationController: UINavigationController) {
+    init(initialState: State, configuration: Configuration = .standard, navigationController: UINavigationController) {
         self.initialState = initialState
         self.navigationController = navigationController
+        self.configuration = configuration
     }
 
     func start() {
@@ -44,7 +46,7 @@ struct RootCoordinator: Coordinating {
     private func firstNameScreen() -> UIViewController {
         FirstNameViewController(
             viewModel: .init(
-                validator: FirstNameValidator(nameLength: 1...50),
+                validator: FirstNameValidator(configuration: configuration),
                 store: { firstName in
                     let userData = FirstNameUserData(firstName: firstName)
                     setState(.lastName(userData))
@@ -56,7 +58,7 @@ struct RootCoordinator: Coordinating {
     private func lastNameScreen(userData: FirstNameUserData) -> UIViewController {
         LastNameViewController(
             viewModel: .init(
-                validator: LastNameValidator(nameLength: 1...50),
+                validator: LastNameValidator(configuration: configuration),
                 store: { lastName in
                     let userData = LastNameUserData(lastName: lastName, previous: userData)
                     showCompletionAlert(message: "\(userData)")

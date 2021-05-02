@@ -11,6 +11,10 @@ public protocol FirstNameValidating {
 }
 
 extension FirstNameValidator: FirstNameValidating {
+    public init(configuration: Configuration) {
+        self.init(nameLength: configuration.validators.firstName.nameLength)
+    }
+    
     public func makeFirstName(input: String) -> Result<FirstNameModel, FirstNameError> {
         let result: Result<FirstName, FirstNameError> = makeFirstName(input: input)
         return result.map { $0 as FirstNameModel }
