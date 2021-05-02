@@ -7,25 +7,25 @@ import Interface
 import UIKit
 import UserDataValidation
 
-extension RootCoordinator {
+public extension RootCoordinator {
     enum State {
         case firstName
         case lastName(FirstNameUserData)
     }
 }
 
-struct RootCoordinator: Coordinating {
+public struct RootCoordinator: Coordinating {
     private var initialState: State
-    var navigationController: UINavigationController
+    public var navigationController: UINavigationController
     private let configuration: Configuration
 
-    init(initialState: State, configuration: Configuration = .standard, navigationController: UINavigationController) {
+    public init(initialState: State, configuration: Configuration = .standard, navigationController: UINavigationController) {
         self.initialState = initialState
         self.navigationController = navigationController
         self.configuration = configuration
     }
 
-    func start() {
+    public func start() {
         setState(initialState)
     }
     
