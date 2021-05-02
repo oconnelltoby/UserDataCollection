@@ -6,7 +6,7 @@ import Localization
 import UIKit
 import UserDataValidation
 
-public struct FirstNameViewModel {
+public struct NameViewModel {
     var minLength: UInt
     var maxLength: UInt
     var validate: (_ name: String) -> Result<Void, Error>
@@ -18,9 +18,9 @@ public struct FirstNameViewModel {
     }
 }
 
-public class FirstNameViewController: UIViewController {
+public class NameViewController: UIViewController {
     private lazy var textFieldDelegate = TextFieldDelegate().resignOnReturn().capAt(length: viewModel.maxLength)
-    private let viewModel: FirstNameViewModel
+    private let viewModel: NameViewModel
     private let headding = UILabel.heading(.first_name_heading)
     private let body = UILabel.body(.first_name_body)
     private let infoIcon = UIImageView.icon(systemName: "info.circle")
@@ -29,7 +29,7 @@ public class FirstNameViewController: UIViewController {
     private lazy var textField = TextField(placeholder: localize(.first_name_textfield_placeholder)).withDelegate(textFieldDelegate)
     private let button = UIButton.primary(localize(.first_name_button))
 
-    public init(viewModel: FirstNameViewModel) {
+    public init(viewModel: NameViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)

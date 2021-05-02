@@ -23,7 +23,7 @@ public extension FirstNameScreenScenario {
     static var coordinator: Coordinating {
         var showAlert: ((String) -> Void)?
 
-        let viewController = FirstNameViewController(
+        let viewController = NameViewController(
             viewModel: .init(
                 minLength: minLength,
                 maxLength: maxLength,
