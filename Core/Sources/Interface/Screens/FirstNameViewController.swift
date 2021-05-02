@@ -7,9 +7,9 @@ import Localization
 public struct FirstNameViewModel {
     var minLength: UInt
     var maxLength: UInt
-    var validate: (_ name: String) -> Result<Void, Error>
+    var validate: (_ name: String) -> Result<() -> Void, Error>
     
-    public init(minLength: UInt, maxLength: UInt, validate: @escaping (_ name: String) -> Result<Void, Error>) {
+    public init(minLength: UInt, maxLength: UInt, validate: @escaping (_ name: String) -> Result<() -> Void, Error>) {
         self.minLength = minLength
         self.maxLength = maxLength
         self.validate = validate

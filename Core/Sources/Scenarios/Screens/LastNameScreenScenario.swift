@@ -27,9 +27,10 @@ public extension LastNameScreenScenario {
             viewModel: .init(
                 minLength: minLength,
                 maxLength: maxLength,
-                validate: {
-                    showAlert?($0)
-                    return result
+                validate: { lastName in
+                    result.map {
+                        { showAlert?(lastName) }
+                    }
                 }
             )
         )

@@ -17,9 +17,9 @@ struct NameViewModel {
     
     var labels: Labels
     var maxLength: UInt
-    var validate: (_ name: String) -> Result<Void, Error>
+    var validate: (_ name: String) -> Result<() -> Void, Error>
 
-    init(labels: Labels, maxLength: UInt, validate: @escaping (_ name: String) -> Result<Void, Error>) {
+    init(labels: Labels, maxLength: UInt, validate: @escaping (_ name: String) -> Result<() -> Void, Error>) {
         self.labels = labels
         self.maxLength = maxLength
         self.validate = validate
@@ -52,8 +52,9 @@ public class NameViewController: UIViewController {
             guard let self = self else { return }
 
             switch self.viewModel.validate(self.textField.text ?? "") {
-            case .success:
+            case let .success(completion):
                 self.textField.resignFirstResponder()
+                completion()
             case .failure:
                 self.textField.errorState = .error
             }

@@ -16,8 +16,9 @@ extension LastNameViewModel {
                 let result = validator.makeLastName(input: input)
                 switch result {
                 case let .success(firstName):
-                    store(firstName)
-                    return .success
+                    return .success {
+                        store(firstName)
+                    }
                 case let .failure(error):
                     return .failure(error)
                 }
