@@ -5,7 +5,7 @@
 import Integration
 import UserDataValidation
 
-struct MockValidator: FirstNameValidating {
+struct MockFirstNameValidator: FirstNameValidating {
     var validInput: String
     var tooLongInput: String
     var tooShortInput: String

@@ -8,12 +8,12 @@ import XCTest
 @testable import Interface
 
 class FirstNameViewModelTests: XCTestCase {
-    var validator: MockValidator!
+    var validator: MockFirstNameValidator!
     var viewModel: FirstNameViewModel!
     var storedFirstName: FirstNameModel?
 
     override func setUp() {
-        validator = MockValidator(
+        validator = MockFirstNameValidator(
             validInput: "Valid First Name",
             tooLongInput: "Too Long First Name",
             tooShortInput: "Too Short First Name",
