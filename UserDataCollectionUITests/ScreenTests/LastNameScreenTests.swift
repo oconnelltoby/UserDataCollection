@@ -24,7 +24,7 @@ class LastNameScreenTests: XCTestCase {
         let scenario = LastNameSuccessScreenScenario.self
         launch(scenario: scenario) { app in
             let model = LastNameScreenModel(app: app)
-            let text = String.random()
+            let text = String.random(length: Int(scenario.maxLength))
             model.textField.tap()
             model.textField.typeText(text)
             model.button.tap()
