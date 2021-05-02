@@ -21,10 +21,10 @@ public struct FirstNameViewModel {
 public class FirstNameViewController: UIViewController {
     private lazy var textFieldDelegate = TextFieldDelegate().resignOnReturn().capAt(length: viewModel.maxLength)
     private let viewModel: FirstNameViewModel
-    private let headding = UILabel.heading(localize(.first_name_heading))
-    private let body = UILabel.body(localize(.first_name_body))
+    private let headding = UILabel.heading(.first_name_heading)
+    private let body = UILabel.body(.first_name_body)
     private let infoIcon = UIImageView.icon(systemName: "info.circle")
-    private lazy var infoLabel = UILabel.body(localize(.first_name_info(min: viewModel.minLength, max: viewModel.maxLength)))
+    private lazy var infoLabel = UILabel.body(.first_name_info(min: viewModel.minLength, max: viewModel.maxLength))
     private lazy var infoStack = UIStackView(arrangedSubviews: [infoIcon, infoLabel]).styleAsRow()
     private lazy var textField = TextField(placeholder: localize(.first_name_textfield_placeholder)).withDelegate(textFieldDelegate)
     private let button = UIButton.primary(localize(.first_name_button))
