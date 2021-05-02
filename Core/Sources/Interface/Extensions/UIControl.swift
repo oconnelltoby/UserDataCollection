@@ -11,3 +11,11 @@ public extension UIButton {
         return self
     }
 }
+
+public extension UITextField {
+    @discardableResult
+    func addAction(_ action: @escaping () -> Void) -> Self {
+        addAction(.init(handler: { _ in action() }), for: .editingChanged)
+        return self
+    }
+}
