@@ -7,16 +7,16 @@ import Integration
 import Interface
 import UIKit
 
-class LastNameFlowScenario: Scenario {
+public class LastNameFlowScenario: Scenario {
     public static var path = Path("Flows", "Last Name")
     
     static let configuration: Configuration = .standard
-    static let userData = LastNameUserData.mock
-    static var lastName: String {
+    public static let userData = LastNameUserData.mock
+    public static var lastName: String {
         userData.lastName.value
     }
 
-    static var coordinator: Coordinating {
+    public static var coordinator: Coordinating {
         let navigationController = UINavigationController().styleAsStandard()
         return RootCoordinator(initialState: .lastName(userData.previous), configuration: configuration, navigationController: navigationController)
     }
