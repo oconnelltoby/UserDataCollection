@@ -19,34 +19,43 @@ public struct FirstNameViewModel {
 }
 
 public class FirstNameViewController: UIViewController {
-    let textFieldDelegate = TextFieldDelegate().resignOnReturn()
+    private lazy var textFieldDelegate = TextFieldDelegate().resignOnReturn().capAt(length: viewModel.maxLength)
+    private let viewModel: FirstNameViewModel
+    private let headding = UILabel.heading(localize(.first_name_heading))
+    private let body = UILabel.body(localize(.first_name_body))
+    private let infoIcon = UIImageView.icon(systemName: "info.circle")
+    private lazy var infoLabel = UILabel.body(localize(.first_name_info(min: viewModel.minLength, max: viewModel.maxLength)))
+    private lazy var infoStack = UIStackView(arrangedSubviews: [infoIcon, infoLabel]).styleAsRow()
+    private lazy var textField = TextField(placeholder: localize(.first_name_textfield_placeholder)).withDelegate(textFieldDelegate)
+    private let button = UIButton.primary(localize(.first_name_button))
 
     public init(viewModel: FirstNameViewModel) {
+        self.viewModel = viewModel
+        
         super.init(nibName: nil, bundle: nil)
-
-        let headding = UILabel.heading(localize(.first_name_heading))
-        let body = UILabel.body(localize(.first_name_body))
-        let infoIcon = UIImageView.icon(systemName: "info.circle")
-        let infoLabel = UILabel.body(localize(.first_name_info(min: viewModel.minLength, max: viewModel.maxLength)))
-        let infoStack = UIStackView(arrangedSubviews: [infoIcon, infoLabel]).styleAsRow()
-        let textField = TextField(placeholder: localize(.first_name_textfield_placeholder)).withDelegate(textFieldDelegate.capAt(length: viewModel.maxLength))
-        let button = UIButton.primary(localize(.first_name_button)).addAction {
-            switch viewModel.validate(textField.text ?? "") {
-            case .success:
-                textField.resignFirstResponder()
-            case .failure:
-                textField.errorState = .error
-            }
-        }
-
-        let action = UIAction { [weak textField] _ in
-            guard let textField = textField else { return }
-            textField.errorState = .normal
-        }
-        textField.addAction(action, for: .editingChanged)
+        setupActions()
 
         view = TemplateView(scrolling: [headding, body, infoStack, textField], footer: button)
         title = localize(.first_name_title)
+    }
+    
+    private func setupActions() {
+        button.addAction { [weak self] in
+            guard let self = self else { return }
+
+            switch self.viewModel.validate(self.textField.text ?? "") {
+            case .success:
+                self.textField.resignFirstResponder()
+            case .failure:
+                self.textField.errorState = .error
+            }
+        }
+
+        textField.addAction { [weak self] in
+            guard let self = self else { return }
+            
+            self.textField.errorState = .normal
+        }
     }
 
     @available(*, unavailable)
