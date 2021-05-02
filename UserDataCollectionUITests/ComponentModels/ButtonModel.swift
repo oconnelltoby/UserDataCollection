@@ -5,7 +5,7 @@
 import Scenarios
 import XCTest
 
-struct PrimaryButtonModel {
+struct ButtonModel {
     var app: XCUIApplication
 
     var primaryButton: XCUIElement {

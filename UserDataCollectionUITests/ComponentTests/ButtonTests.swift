@@ -8,7 +8,7 @@ import XCTest
 class PrimaryButtonTests: XCTestCase {
     func testBasics() {
         launch(scenario: ButtonScenario.self) { app in
-            let model = PrimaryButtonModel(app: app)
+            let model = ButtonModel(app: app)
             model.primaryButton.assertExists()
             model.secondaryButton.assertExists()
         }
@@ -16,7 +16,7 @@ class PrimaryButtonTests: XCTestCase {
 
     func testPrimaryButtonTapAction() {
         launch(scenario: ButtonScenario.self) { app in
-            let model = PrimaryButtonModel(app: app)
+            let model = ButtonModel(app: app)
             model.primaryButton.assertExists()
             model.primaryButton.tap()
             model.primaryButtonAlertTitle.assertExists()
@@ -25,10 +25,10 @@ class PrimaryButtonTests: XCTestCase {
 
     func testSecondaryButtonTapAction() {
         launch(scenario: ButtonScenario.self) { app in
-            let model = PrimaryButtonModel(app: app)
-            model.primaryButton.assertExists()
-            model.primaryButton.tap()
-            model.primaryButtonAlertTitle.assertExists()
+            let model = ButtonModel(app: app)
+            model.secondaryButton.assertExists()
+            model.secondaryButton.tap()
+            model.secondaryButtonAlertTitle.assertExists()
         }
     }
 }
