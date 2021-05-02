@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11E167263EABE500911614 /* LastNameScreenModel.swift */; };
 		DD11E176263EAC4300911614 /* LastNameScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11E175263EAC4300911614 /* LastNameScreenTests.swift */; };
+		DD4716C3263EF9FC006F7D15 /* FirstNameFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4716C2263EF9FC006F7D15 /* FirstNameFlowTests.swift */; };
+		DD4716CD263EFAE3006F7D15 /* LastNameFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4716CC263EFAE3006F7D15 /* LastNameFlowTests.swift */; };
 		F10A73672635BFE700C8B834 /* TestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F10A73662635BFE700C8B834 /* TestSupport */; };
 		F10A73752635C5D800C8B834 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10A73742635C5D800C8B834 /* XCUIElement.swift */; };
 		F149459526108D0B00F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149459426108D0B00F67667 /* SceneDelegate.swift */; };
@@ -57,6 +59,8 @@
 /* Begin PBXFileReference section */
 		DD11E167263EABE500911614 /* LastNameScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameScreenModel.swift; sourceTree = "<group>"; };
 		DD11E175263EAC4300911614 /* LastNameScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameScreenTests.swift; sourceTree = "<group>"; };
+		DD4716C2263EF9FC006F7D15 /* FirstNameFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameFlowTests.swift; sourceTree = "<group>"; };
+		DD4716CC263EFAE3006F7D15 /* LastNameFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameFlowTests.swift; sourceTree = "<group>"; };
 		F101CA4D261D0C5000D9EB3A /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 		F101CA52261D0D2C00D9EB3A /* AllTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AllTests.xctestplan; sourceTree = "<group>"; };
 		F10A73742635C5D800C8B834 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
@@ -136,6 +140,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4716C1263EF9ED006F7D15 /* FlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD4716C2263EF9FC006F7D15 /* FirstNameFlowTests.swift */,
+				DD4716CC263EFAE3006F7D15 /* LastNameFlowTests.swift */,
+			);
+			path = FlowTests;
+			sourceTree = "<group>";
+		};
 		F1404FB0261B76290067D241 /* TestPlans */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +365,7 @@
 				F1E871ED26186AC9000F89A0 /* ComponentModels */,
 				F1E871EF26186AC9000F89A0 /* ComponentTests */,
 				F1B50D952635808100F800BF /* ScreenModels */,
+				DD4716C1263EF9ED006F7D15 /* FlowTests */,
 				F1B50D8A26357FF400F800BF /* ScreenTests */,
 				F1A5BBFF260F8C48001EB451 /* Configurations */,
 			);
@@ -576,6 +590,7 @@
 				F1E871F226186AC9000F89A0 /* ButtonModel.swift in Sources */,
 				DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */,
 				DD11E176263EAC4300911614 /* LastNameScreenTests.swift in Sources */,
+				DD4716C3263EF9FC006F7D15 /* FirstNameFlowTests.swift in Sources */,
 				F1E871F326186AC9000F89A0 /* ButtonTests.swift in Sources */,
 				F1B50DA1263580DE00F800BF /* XCUIElementQuery.swift in Sources */,
 				F1E871F126186AC9000F89A0 /* XCTestCase.swift in Sources */,
@@ -584,6 +599,7 @@
 				F1C70C792621F7A1001458D5 /* TextFieldModel.swift in Sources */,
 				F10A73752635C5D800C8B834 /* XCUIElement.swift in Sources */,
 				F1C70C732621F74C001458D5 /* TextFieldTests.swift in Sources */,
+				DD4716CD263EFAE3006F7D15 /* LastNameFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
