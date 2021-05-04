@@ -86,7 +86,6 @@
 		F1B50DA0263580DE00F800BF /* XCUIElementQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementQuery.swift; sourceTree = "<group>"; };
 		F1C70C722621F74C001458D5 /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
 		F1C70C782621F7A1001458D5 /* TextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModel.swift; sourceTree = "<group>"; };
-		F1E0E51D2619AC3B009FEA2E /* CLI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CLI; sourceTree = "<group>"; };
 		F1E871EC26186AC9000F89A0 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		F1E871EE26186AC9000F89A0 /* ButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		F1E871F026186AC9000F89A0 /* ButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTests.swift; sourceTree = "<group>"; };
@@ -316,7 +315,6 @@
 		F1FE1A01260F2EEE00FA249E = {
 			isa = PBXGroup;
 			children = (
-				F1E0E51D2619AC3B009FEA2E /* CLI */,
 				F1FE1A43260F3C4800FA249E /* Core */,
 				F1A5BBF1260F7A5A001EB451 /* Configurations */,
 				F1FE1A0C260F2EEE00FA249E /* UserDataCollection */,

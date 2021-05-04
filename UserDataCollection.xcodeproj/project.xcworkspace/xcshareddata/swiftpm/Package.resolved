@@ -2,33 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "ShellOut",
-        "repositoryURL": "https://github.com/JohnSundell/ShellOut.git",
-        "state": {
-          "branch": null,
-          "revision": "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
-          "version": "2.3.0"
-        }
-      },
-      {
-        "package": "swift-argument-parser",
-        "repositoryURL": "https://github.com/apple/swift-argument-parser",
-        "state": {
-          "branch": null,
-          "revision": "986d191f94cec88f6350056da59c2e59e83d1229",
-          "version": "0.4.3"
-        }
-      },
-      {
-        "package": "SwiftFormat",
-        "repositoryURL": "https://github.com/nicklockwood/SwiftFormat",
-        "state": {
-          "branch": null,
-          "revision": "01aff6e657da311f1c7d59806ac18293ba5b7e2b",
-          "version": "0.48.0"
-        }
-      },
-      {
         "package": "UserDataValidation",
         "repositoryURL": "https://github.com/oconnelltoby/UserDataValidation.git",
         "state": {
