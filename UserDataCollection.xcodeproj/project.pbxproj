@@ -13,6 +13,8 @@
 		DD4716CD263EFAE3006F7D15 /* LastNameFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4716CC263EFAE3006F7D15 /* LastNameFlowTests.swift */; };
 		F10A73672635BFE700C8B834 /* TestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F10A73662635BFE700C8B834 /* TestSupport */; };
 		F10A73752635C5D800C8B834 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10A73742635C5D800C8B834 /* XCUIElement.swift */; };
+		F10D711D2697B59D00AF5948 /* EmailAddressScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D711C2697B59D00AF5948 /* EmailAddressScreenTests.swift */; };
+		F10D711F2697B5C200AF5948 /* EmailAddressScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D711E2697B5C200AF5948 /* EmailAddressScreenModel.swift */; };
 		F149459526108D0B00F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149459426108D0B00F67667 /* SceneDelegate.swift */; };
 		F149459A26108D1000F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149458E26108D0300F67667 /* SceneDelegate.swift */; };
 		F157B6AB2611325200B9C3C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F157B6AA2611325200B9C3C3 /* Colors.xcassets */; };
@@ -64,6 +66,8 @@
 		F101CA4D261D0C5000D9EB3A /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 		F101CA52261D0D2C00D9EB3A /* AllTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AllTests.xctestplan; sourceTree = "<group>"; };
 		F10A73742635C5D800C8B834 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
+		F10D711C2697B59D00AF5948 /* EmailAddressScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressScreenTests.swift; sourceTree = "<group>"; };
+		F10D711E2697B5C200AF5948 /* EmailAddressScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressScreenModel.swift; sourceTree = "<group>"; };
 		F1404FB1261B764A0067D241 /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITests.xctestplan; sourceTree = "<group>"; };
 		F149458E26108D0300F67667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F149459426108D0B00F67667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			children = (
 				DD11E175263EAC4300911614 /* LastNameScreenTests.swift */,
 				F1B50D8B2635800900F800BF /* FirstNameScreenTests.swift */,
+				F10D711C2697B59D00AF5948 /* EmailAddressScreenTests.swift */,
 			);
 			path = ScreenTests;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			children = (
 				DD11E167263EABE500911614 /* LastNameScreenModel.swift */,
 				F1B50D962635809300F800BF /* FirstNameScreenModel.swift */,
+				F10D711E2697B5C200AF5948 /* EmailAddressScreenModel.swift */,
 			);
 			path = ScreenModels;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1E871F226186AC9000F89A0 /* ButtonModel.swift in Sources */,
+				F10D711F2697B5C200AF5948 /* EmailAddressScreenModel.swift in Sources */,
 				DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */,
 				DD11E176263EAC4300911614 /* LastNameScreenTests.swift in Sources */,
 				DD4716C3263EF9FC006F7D15 /* FirstNameFlowTests.swift in Sources */,
@@ -598,6 +605,7 @@
 				F10A73752635C5D800C8B834 /* XCUIElement.swift in Sources */,
 				F1C70C732621F74C001458D5 /* TextFieldTests.swift in Sources */,
 				DD4716CD263EFAE3006F7D15 /* LastNameFlowTests.swift in Sources */,
+				F10D711D2697B59D00AF5948 /* EmailAddressScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
