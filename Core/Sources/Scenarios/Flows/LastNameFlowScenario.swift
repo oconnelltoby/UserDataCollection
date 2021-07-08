@@ -11,7 +11,7 @@ public class LastNameFlowScenario: Scenario {
     public static var path = Path("Flows", "Last Name")
     
     static let configuration: Configuration = .standard
-    public static let userData = LastNameUserData.mock
+    static let userData = LastNameUserData.mock
     public static var lastName: String {
         userData.lastName.value
     }

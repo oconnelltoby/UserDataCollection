@@ -15,8 +15,8 @@ class LastNameFlowTests: XCTestCase {
             firstNameScreenModel.textField.typeText(scenario.lastName)
             firstNameScreenModel.button.tap()
             
-            let alertTitle = scenario.userData.debugDescription
-            app.staticTexts[alertTitle].assertExists()
+            let emailAddressScreenModel = EmailAddressScreenModel(app: app)
+            emailAddressScreenModel.heading.assertExists()
         }
     }
 }

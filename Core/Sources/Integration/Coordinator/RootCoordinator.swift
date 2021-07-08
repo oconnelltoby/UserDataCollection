@@ -11,6 +11,7 @@ public extension RootCoordinator {
     enum State {
         case firstName
         case lastName(FirstNameUserData)
+        case emailAddres(LastNameUserData)
     }
 }
 
@@ -40,6 +41,8 @@ public struct RootCoordinator: Coordinating {
             return firstNameScreen()
         case let .lastName(userData):
             return lastNameScreen(userData: userData)
+        case let .emailAddres(userData):
+            return emailAddressScreen(userData: userData)
         }
     }
     
@@ -61,6 +64,22 @@ public struct RootCoordinator: Coordinating {
                 validator: LastNameValidator(configuration: configuration),
                 store: { lastName in
                     let userData = LastNameUserData(lastName: lastName, previous: userData)
+                    setState(.emailAddres(userData))
+                }
+            )
+        )
+    }
+
+    private func emailAddressScreen(userData: LastNameUserData) -> UIViewController {
+        guard let validator = try? EmailAddressValidator(configuration: configuration) else {
+            preconditionFailure("Unable to create \(EmailAddressValidator.self)")
+        }
+        
+        return EmailAddressViewController(
+            viewModel: .init(
+                validator: validator,
+                store: { emailAddress in
+                    let userData = EmailAddressUserData(emailAddress: emailAddress, previous: userData)
                     showCompletionAlert(message: "\(userData)")
                 }
             )
