@@ -10,6 +10,7 @@ public extension Configuration {
     struct Validators {
         public var firstName: FirstName
         public var lastName: LastName
+        public var emailAddress: EmailAddress
     }
 }
 
@@ -21,6 +22,10 @@ public extension Configuration.Validators {
     struct LastName {
         public var nameLength: ClosedRange<UInt>
     }
+    
+    struct EmailAddress {
+        public var emailAddressLength: ClosedRange<UInt>
+    }
 }
 
 public extension Configuration {
@@ -28,7 +33,8 @@ public extension Configuration {
         .init(
             validators: .init(
                 firstName: .init(nameLength: 1 ... 50),
-                lastName: .init(nameLength: 1 ... 50)
+                lastName: .init(nameLength: 1 ... 50),
+                emailAddress: .init(emailAddressLength: 1 ... 50)
             )
         )
     }
