@@ -15,3 +15,9 @@ extension LastNameUserData {
         .init(lastName: MockLastName(value: "O'Connell"), previous: .mock)
     }
 }
+
+extension EmailAddressUserData {
+    static var mock: EmailAddressUserData {
+        .init(emailAddress: MockEmailAddress(value: "toby@example.com"), previous: .mock)
+    }
+}
