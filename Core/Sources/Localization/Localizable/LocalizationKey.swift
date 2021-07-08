@@ -14,6 +14,12 @@ public enum LocalizationKey: String, CaseIterable {
     case last_name_heading
     case last_name_body
     case last_name_button
+    
+    case email_address_title
+    case email_address_textfield_placeholder
+    case email_address_heading
+    case email_address_body
+    case email_address_button
 }
 
 extension LocalizationKey: Localizable {

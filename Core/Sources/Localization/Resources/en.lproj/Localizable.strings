@@ -11,3 +11,10 @@
 "last_name_body" = "Please enter your last name";
 "last_name_button" = "Continue";
 "last_name_info" = "Your name should be between %d and %d characters";
+
+"email_address_title" = "Your details";
+"email_address_textfield_placeholder" = "Email address";
+"email_address_heading" = "Email address";
+"email_address_body" = "Please enter your email address";
+"email_address_button" = "Continue";
+"email_address_info" = "Your email address should be between %d and %d characters";
