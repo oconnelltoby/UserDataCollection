@@ -30,3 +30,17 @@ public struct LastNameUserData: Passthrough, CustomDebugStringConvertible {
         "\(previous), lastName: \(lastName.value)"
     }
 }
+
+public struct EmailAddressUserData: Passthrough, CustomDebugStringConvertible {
+    public var previous: LastNameUserData
+    public var emailAddress: EmailAddressModel
+    
+    public init(emailAddress: EmailAddressModel, previous: LastNameUserData) {
+        self.emailAddress = emailAddress
+        self.previous = previous
+    }
+    
+    public var debugDescription: String {
+        "\(previous), emailAddress: \(emailAddress.value)"
+    }
+}
