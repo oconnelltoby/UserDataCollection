@@ -16,7 +16,7 @@ public struct FirstNameViewModel {
     }
 }
 
-public class FirstNameViewController: NameViewController {
+public class FirstNameViewController: SingleFieldViewController {
     public convenience init(viewModel: FirstNameViewModel) {
         self.init(
             viewModel: .init(

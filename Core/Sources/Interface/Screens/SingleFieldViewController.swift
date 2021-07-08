@@ -5,7 +5,7 @@
 import UIKit
 import UserDataValidation
 
-struct NameViewModel {
+struct SingleFieldViewModel {
     public struct Labels {
         var title: String
         var heading: String
@@ -17,18 +17,18 @@ struct NameViewModel {
     
     var labels: Labels
     var maxLength: UInt
-    var validate: (_ name: String) -> Result<() -> Void, Error>
+    var validate: (_ input: String) -> Result<() -> Void, Error>
 
-    init(labels: Labels, maxLength: UInt, validate: @escaping (_ name: String) -> Result<() -> Void, Error>) {
+    init(labels: Labels, maxLength: UInt, validate: @escaping (_ input: String) -> Result<() -> Void, Error>) {
         self.labels = labels
         self.maxLength = maxLength
         self.validate = validate
     }
 }
 
-public class NameViewController: UIViewController {
+public class SingleFieldViewController: UIViewController {
     private lazy var textFieldDelegate = TextFieldDelegate().resignOnReturn().capAt(length: viewModel.maxLength)
-    private let viewModel: NameViewModel
+    private let viewModel: SingleFieldViewModel
     private lazy var heading = UILabel.heading(viewModel.labels.heading)
     private lazy var body = UILabel.body(viewModel.labels.body)
     private let infoIcon = UIImageView.icon(systemName: "info.circle")
@@ -37,7 +37,7 @@ public class NameViewController: UIViewController {
     private lazy var textField = TextField(placeholder: viewModel.labels.textField).withDelegate(textFieldDelegate)
     private lazy var button = UIButton.primary(viewModel.labels.button)
 
-    init(viewModel: NameViewModel) {
+    init(viewModel: SingleFieldViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
