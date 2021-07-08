@@ -39,18 +39,21 @@ class EmailAddressViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.maxLength, validator.emailAddressLength.upperBound)
     }
 
-    func testValidInputIsStored() {
-        _ = viewModel.validate(validator.validInput)
+    func testValidInputIsStored() throws {
+        let result = viewModel.validate(validator.validInput)
+        try result.get()()
         XCTAssertEqual(storedEmailAddress?.value, validator.validInput)
     }
 
     func testTooLongInputIsNotStored() {
-        _ = viewModel.validate(validator.tooLongInput)
+        let result = viewModel.validate(validator.tooLongInput)
+        XCTAssertThrowsError(try result.get())
         XCTAssertNil(storedEmailAddress?.value)
     }
 
     func testTooShortInputIsNotStored() {
-        _ = viewModel.validate(validator.tooShortInput)
+        let result = viewModel.validate(validator.tooShortInput)
+        XCTAssertThrowsError(try result.get())
         XCTAssertNil(storedEmailAddress?.value)
     }
 
