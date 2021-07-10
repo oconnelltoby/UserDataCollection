@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11E167263EABE500911614 /* LastNameScreenModel.swift */; };
-		DD11E176263EAC4300911614 /* LastNameScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11E175263EAC4300911614 /* LastNameScreenTests.swift */; };
 		DD4716C3263EF9FC006F7D15 /* FirstNameFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4716C2263EF9FC006F7D15 /* FirstNameFlowTests.swift */; };
 		DD4716CD263EFAE3006F7D15 /* LastNameFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4716CC263EFAE3006F7D15 /* LastNameFlowTests.swift */; };
 		F10A73672635BFE700C8B834 /* TestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F10A73662635BFE700C8B834 /* TestSupport */; };
@@ -59,7 +58,6 @@
 
 /* Begin PBXFileReference section */
 		DD11E167263EABE500911614 /* LastNameScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameScreenModel.swift; sourceTree = "<group>"; };
-		DD11E175263EAC4300911614 /* LastNameScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameScreenTests.swift; sourceTree = "<group>"; };
 		DD4716C2263EF9FC006F7D15 /* FirstNameFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameFlowTests.swift; sourceTree = "<group>"; };
 		DD4716CC263EFAE3006F7D15 /* LastNameFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameFlowTests.swift; sourceTree = "<group>"; };
 		F101CA4D261D0C5000D9EB3A /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
@@ -261,14 +259,6 @@
 			path = Production;
 			sourceTree = "<group>";
 		};
-		F1B50D8A26357FF400F800BF /* ScreenTests */ = {
-			isa = PBXGroup;
-			children = (
-				DD11E175263EAC4300911614 /* LastNameScreenTests.swift */,
-			);
-			path = ScreenTests;
-			sourceTree = "<group>";
-		};
 		F1B50D952635808100F800BF /* ScreenModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,7 +357,6 @@
 				F1E871EF26186AC9000F89A0 /* ComponentTests */,
 				F1B50D952635808100F800BF /* ScreenModels */,
 				DD4716C1263EF9ED006F7D15 /* FlowTests */,
-				F1B50D8A26357FF400F800BF /* ScreenTests */,
 				F1A5BBFF260F8C48001EB451 /* Configurations */,
 			);
 			path = UserDataCollectionUITests;
@@ -591,7 +580,6 @@
 				F1E871F226186AC9000F89A0 /* ButtonModel.swift in Sources */,
 				F10D711F2697B5C200AF5948 /* EmailAddressScreenModel.swift in Sources */,
 				DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */,
-				DD11E176263EAC4300911614 /* LastNameScreenTests.swift in Sources */,
 				DD4716C3263EF9FC006F7D15 /* FirstNameFlowTests.swift in Sources */,
 				F1E871F326186AC9000F89A0 /* ButtonTests.swift in Sources */,
 				F1B50DA1263580DE00F800BF /* XCUIElementQuery.swift in Sources */,
