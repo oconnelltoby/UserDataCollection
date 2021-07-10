@@ -47,8 +47,8 @@ public struct RootCoordinator: Coordinating {
     }
     
     private func firstNameScreen() -> UIViewController {
-        FirstNameViewController(
-            viewModel: .init(
+        SingleFieldViewController(
+            viewModel: .firstName(
                 validator: FirstNameValidator(configuration: configuration),
                 store: { firstName in
                     let userData = FirstNameUserData(firstName: firstName)

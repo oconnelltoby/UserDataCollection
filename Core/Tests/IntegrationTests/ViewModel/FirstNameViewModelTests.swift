@@ -3,14 +3,17 @@
 //
 
 import Domain
+import Localization
 import UserDataValidation
 import XCTest
 @testable import Integration
 @testable import Interface
 
 class FirstNameViewModelTests: XCTestCase {
+    let minLength: UInt = 0
+    let maxLength: UInt = .max
     var validator: MockFirstNameValidator!
-    var viewModel: FirstNameViewModel!
+    var viewModel: SingleFieldViewModel!
     var storedFirstName: FirstNameModel?
 
     override func setUp() {
@@ -21,7 +24,7 @@ class FirstNameViewModelTests: XCTestCase {
             nameLength: 0 ... .max
         )
 
-        viewModel = FirstNameViewModel(
+        viewModel = .firstName(
             validator: validator,
             store: { [weak self] in
                 self?.storedFirstName = $0
@@ -30,9 +33,14 @@ class FirstNameViewModelTests: XCTestCase {
 
         storedFirstName = nil
     }
-
-    func testMinLengthMatchesValidator() {
-        XCTAssertEqual(viewModel.minLength, validator.nameLength.lowerBound)
+    
+    func testCopy() {
+        XCTAssertEqual(localize(.first_name_title), viewModel.labels.title)
+        XCTAssertEqual(localize(.first_name_heading), viewModel.labels.heading)
+        XCTAssertEqual(localize(.first_name_body), viewModel.labels.body)
+        XCTAssertEqual(localize(.first_name_info(min: minLength, max: maxLength)), viewModel.labels.info)
+        XCTAssertEqual(localize(.first_name_button), viewModel.labels.button)
+        XCTAssertEqual(localize(.first_name_textfield_placeholder), viewModel.labels.textField)
     }
 
     func testMaxLengthMatchesValidator() {

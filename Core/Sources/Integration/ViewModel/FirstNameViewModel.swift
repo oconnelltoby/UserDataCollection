@@ -5,12 +5,25 @@
 import Common
 import Domain
 import Interface
+import Localization
 import UserDataValidation
 
-extension FirstNameViewModel {
-    init(validator: FirstNameValidating, store: @escaping (FirstNameModel) -> Void) {
-        self.init(
-            minLength: validator.nameLength.lowerBound,
+extension SingleFieldViewModel {
+    static func firstName(validator: FirstNameValidating, store: @escaping (FirstNameModel) -> Void) -> Self {
+        .init(
+            labels: .init(
+                title: localize(.first_name_title),
+                heading: localize(.first_name_heading),
+                body: localize(.first_name_body),
+                info: localize(
+                    .first_name_info(
+                        min: validator.nameLength.lowerBound,
+                        max: validator.nameLength.upperBound
+                    )
+                ),
+                button: localize(.first_name_button),
+                textField: localize(.first_name_textfield_placeholder)
+            ),
             maxLength: validator.nameLength.upperBound,
             validate: { input in
                 let result = validator.makeFirstName(input: input)
