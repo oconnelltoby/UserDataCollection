@@ -10,10 +10,10 @@ class EmailAddressFlowTests: XCTestCase {
     func testFirstNameCompletion() {
         let scenario = EmailAddressFlowScenario.self
         launch(scenario: scenario) { app in
-            let firstNameScreenModel = EmailAddressScreenModel(app: app)
-            firstNameScreenModel.textField.tap()
-            firstNameScreenModel.textField.typeText(scenario.emailAddress)
-            firstNameScreenModel.button.tap()
+            let emailScreenModel = EmailAddressScreenModel(app: app)
+            emailScreenModel.textField.tap()
+            emailScreenModel.textField.typeText(scenario.emailAddress)
+            emailScreenModel.button.tap()
             
             let alertTitle = scenario.userData.debugDescription
             app.staticTexts[alertTitle].assertExists()

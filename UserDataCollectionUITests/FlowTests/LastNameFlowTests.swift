@@ -7,13 +7,13 @@ import TestSupport
 import XCTest
 
 class LastNameFlowTests: XCTestCase {
-    func testFirstNameCompletion() {
+    func testLastNameCompletion() {
         let scenario = LastNameFlowScenario.self
         launch(scenario: scenario) { app in
-            let firstNameScreenModel = LastNameScreenModel(app: app)
-            firstNameScreenModel.textField.tap()
-            firstNameScreenModel.textField.typeText(scenario.lastName)
-            firstNameScreenModel.button.tap()
+            let lastNameScreenModel = LastNameScreenModel(app: app)
+            lastNameScreenModel.textField.tap()
+            lastNameScreenModel.textField.typeText(scenario.lastName)
+            lastNameScreenModel.button.tap()
             
             let emailAddressScreenModel = EmailAddressScreenModel(app: app)
             emailAddressScreenModel.heading.assertExists()
