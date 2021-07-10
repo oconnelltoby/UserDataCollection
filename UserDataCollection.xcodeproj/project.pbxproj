@@ -16,6 +16,8 @@
 		F10D71212697C0A100AF5948 /* EmailAddressFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D71202697C0A100AF5948 /* EmailAddressFlowTests.swift */; };
 		F149459526108D0B00F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149459426108D0B00F67667 /* SceneDelegate.swift */; };
 		F149459A26108D1000F67667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149458E26108D0300F67667 /* SceneDelegate.swift */; };
+		F14BF0B0269A222C004E186D /* SingleFieldScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF0AF269A222C004E186D /* SingleFieldScreenTests.swift */; };
+		F14BF0B2269A2283004E186D /* SingleFieldScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF0B1269A2283004E186D /* SingleFieldScreenModel.swift */; };
 		F157B6AB2611325200B9C3C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F157B6AA2611325200B9C3C3 /* Colors.xcassets */; };
 		F157B6AC2611325F00B9C3C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F157B6AA2611325200B9C3C3 /* Colors.xcassets */; };
 		F1A5BC29260F8EF0001EB451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE1A0D260F2EEE00FA249E /* AppDelegate.swift */; };
@@ -68,6 +70,8 @@
 		F1404FB1261B764A0067D241 /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITests.xctestplan; sourceTree = "<group>"; };
 		F149458E26108D0300F67667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F149459426108D0B00F67667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F14BF0AF269A222C004E186D /* SingleFieldScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFieldScreenTests.swift; sourceTree = "<group>"; };
+		F14BF0B1269A2283004E186D /* SingleFieldScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFieldScreenModel.swift; sourceTree = "<group>"; };
 		F157B6AA2611325200B9C3C3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F1A5BBCC260F7574001EB451 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F1A5BBCD260F7596001EB451 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -185,6 +189,14 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
+		F14BF0AE269A1DF7004E186D /* ScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				F14BF0AF269A222C004E186D /* SingleFieldScreenTests.swift */,
+			);
+			path = ScreenTests;
+			sourceTree = "<group>";
+		};
 		F1A5BBC2260F55F9001EB451 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +277,7 @@
 				DD11E167263EABE500911614 /* LastNameScreenModel.swift */,
 				F1B50D962635809300F800BF /* FirstNameScreenModel.swift */,
 				F10D711E2697B5C200AF5948 /* EmailAddressScreenModel.swift */,
+				F14BF0B1269A2283004E186D /* SingleFieldScreenModel.swift */,
 			);
 			path = ScreenModels;
 			sourceTree = "<group>";
@@ -352,6 +365,7 @@
 		F1FE1A2E260F2EEF00FA249E /* UserDataCollectionUITests */ = {
 			isa = PBXGroup;
 			children = (
+				F14BF0AE269A1DF7004E186D /* ScreenTests */,
 				F1E8720C2618F234000F89A0 /* Helper */,
 				F1E871ED26186AC9000F89A0 /* ComponentModels */,
 				F1E871EF26186AC9000F89A0 /* ComponentTests */,
@@ -578,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1E871F226186AC9000F89A0 /* ButtonModel.swift in Sources */,
+				F14BF0B2269A2283004E186D /* SingleFieldScreenModel.swift in Sources */,
 				F10D711F2697B5C200AF5948 /* EmailAddressScreenModel.swift in Sources */,
 				DD11E168263EABE500911614 /* LastNameScreenModel.swift in Sources */,
 				DD4716C3263EF9FC006F7D15 /* FirstNameFlowTests.swift in Sources */,
@@ -589,6 +604,7 @@
 				F10A73752635C5D800C8B834 /* XCUIElement.swift in Sources */,
 				F1C70C732621F74C001458D5 /* TextFieldTests.swift in Sources */,
 				DD4716CD263EFAE3006F7D15 /* LastNameFlowTests.swift in Sources */,
+				F14BF0B0269A222C004E186D /* SingleFieldScreenTests.swift in Sources */,
 				F10D71212697C0A100AF5948 /* EmailAddressFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
