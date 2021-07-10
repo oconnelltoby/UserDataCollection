@@ -3,14 +3,17 @@
 //
 
 import Domain
+import Localization
 import UserDataValidation
 import XCTest
 @testable import Integration
 @testable import Interface
 
 class EmailAddressViewModelTests: XCTestCase {
+    let minLength: UInt = 0
+    let maxLength: UInt = .max
     var validator: MockEmailAddressValidator!
-    var viewModel: EmailAddressViewModel!
+    var viewModel: SingleFieldViewModel!
     var storedEmailAddress: EmailAddressModel?
 
     override func setUp() {
@@ -18,10 +21,10 @@ class EmailAddressViewModelTests: XCTestCase {
             validInput: "Valid Email Address",
             tooLongInput: "Too Long Email Address",
             tooShortInput: "Too Short Email Address",
-            emailAddressLength: 0 ... .max
+            emailAddressLength: minLength ... maxLength
         )
 
-        viewModel = EmailAddressViewModel(
+        viewModel = .email(
             validator: validator,
             store: { [weak self] in
                 self?.storedEmailAddress = $0
@@ -30,9 +33,14 @@ class EmailAddressViewModelTests: XCTestCase {
 
         storedEmailAddress = nil
     }
-
-    func testMinLengthMatchesValidator() {
-        XCTAssertEqual(viewModel.minLength, validator.emailAddressLength.lowerBound)
+    
+    func testCopy() {
+        XCTAssertEqual(localize(.email_address_title), viewModel.labels.title)
+        XCTAssertEqual(localize(.email_address_heading), viewModel.labels.heading)
+        XCTAssertEqual(localize(.email_address_body), viewModel.labels.body)
+        XCTAssertEqual(localize(.email_address_info(min: minLength, max: maxLength)), viewModel.labels.info)
+        XCTAssertEqual(localize(.email_address_button), viewModel.labels.button)
+        XCTAssertEqual(localize(.email_address_textfield_placeholder), viewModel.labels.textField)
     }
 
     func testMaxLengthMatchesValidator() {

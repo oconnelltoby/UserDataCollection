@@ -5,7 +5,7 @@
 import UIKit
 import UserDataValidation
 
-struct SingleFieldViewModel {
+public struct SingleFieldViewModel {
     public struct Labels {
         var title: String
         var heading: String
@@ -13,13 +13,29 @@ struct SingleFieldViewModel {
         var info: String
         var button: String
         var textField: String
+        
+        public init(
+            title: String,
+            heading: String,
+            body: String,
+            info: String,
+            button: String,
+            textField: String
+        ) {
+            self.title = title
+            self.heading = heading
+            self.body = body
+            self.info = info
+            self.button = button
+            self.textField = textField
+        }
     }
     
     var labels: Labels
     var maxLength: UInt
     var validate: (_ input: String) -> Result<() -> Void, Error>
 
-    init(labels: Labels, maxLength: UInt, validate: @escaping (_ input: String) -> Result<() -> Void, Error>) {
+    public init(labels: Labels, maxLength: UInt, validate: @escaping (_ input: String) -> Result<() -> Void, Error>) {
         self.labels = labels
         self.maxLength = maxLength
         self.validate = validate
@@ -37,7 +53,7 @@ public class SingleFieldViewController: UIViewController {
     private lazy var textField = TextField(placeholder: viewModel.labels.textField).withDelegate(textFieldDelegate)
     private lazy var button = UIButton.primary(viewModel.labels.button)
 
-    init(viewModel: SingleFieldViewModel) {
+    public init(viewModel: SingleFieldViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)

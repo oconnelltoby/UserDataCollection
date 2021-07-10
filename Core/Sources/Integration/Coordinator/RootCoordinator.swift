@@ -75,8 +75,8 @@ public struct RootCoordinator: Coordinating {
             preconditionFailure("Unable to create \(EmailAddressValidator.self)")
         }
         
-        return EmailAddressViewController(
-            viewModel: .init(
+        return SingleFieldViewController(
+            viewModel: .email(
                 validator: validator,
                 store: { emailAddress in
                     let userData = EmailAddressUserData(emailAddress: emailAddress, previous: userData)
