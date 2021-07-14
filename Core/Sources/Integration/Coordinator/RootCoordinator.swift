@@ -71,13 +71,9 @@ public struct RootCoordinator: Coordinating {
     }
 
     private func emailAddressScreen(userData: LastNameUserData) -> UIViewController {
-        guard let validator = try? EmailAddressValidator(configuration: configuration) else {
-            preconditionFailure("Unable to create \(EmailAddressValidator.self)")
-        }
-        
-        return SingleFieldViewController(
+        SingleFieldViewController(
             viewModel: .email(
-                validator: validator,
+                validator: EmailAddressValidator(configuration: configuration),
                 store: { emailAddress in
                     let userData = EmailAddressUserData(emailAddress: emailAddress, previous: userData)
                     showCompletionAlert(message: "\(userData)")

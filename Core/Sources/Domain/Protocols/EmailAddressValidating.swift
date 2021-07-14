@@ -10,8 +10,8 @@ public protocol EmailAddressValidating {
 }
 
 extension EmailAddressValidator: EmailAddressValidating {
-    public init(configuration: Configuration) throws {
-        try self.init(emailAddressLength: configuration.validators.emailAddress.emailAddressLength)
+    public init(configuration: Configuration) {
+        self.init(emailAddressLength: configuration.validators.emailAddress.emailAddressLength)
     }
     
     public func makeEmailAddress(input: String) -> Result<EmailAddressModel, EmailAddressError> {
