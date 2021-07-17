@@ -15,6 +15,7 @@ public class TextField: UITextField {
     public var errorState: ErrorState = .normal {
         didSet {
             setBorderColor(isEditing: isEditing, errorState: errorState)
+            setTintColor(errorState: errorState)
         }
     }
 
@@ -29,14 +30,22 @@ public class TextField: UITextField {
 
         layer.cornerRadius = .buttonCornerRadius
         setBorderColor(isEditing: isEditing, errorState: errorState)
+        setTintColor(errorState: errorState)
 
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontForContentSizeCategory = true
         autocorrectionType = .no
         enablesReturnKeyAutomatically = true
         NSLayoutConstraint.activate([heightAnchor.constraint(greaterThanOrEqualToConstant: .buttonMinimumHeight)])
-
-        tintColor = UIColor(.accentGreen)
+    }
+    
+    private func setTintColor(errorState: ErrorState) {
+        switch errorState {
+        case .error:
+            tintColor = UIColor(.error)
+        case .normal:
+            tintColor = UIColor(.accentGreen)
+        }
     }
 
     private func setBorderColor(isEditing: Bool, errorState: ErrorState) {
