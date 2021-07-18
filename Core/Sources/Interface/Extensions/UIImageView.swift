@@ -16,4 +16,12 @@ extension UIImageView {
 
         return imageView
     }
+    
+    func setTintColor(_ colorName: ColorName) {
+        image = image?.withTintColor(UIColor(colorName))
+    }
+    
+    func setTintColor(_ color: UIColor) {
+        image = image?.withTintColor(color)
+    }
 }
