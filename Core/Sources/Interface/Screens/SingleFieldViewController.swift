@@ -73,6 +73,7 @@ public class SingleFieldViewController: UIViewController {
                 completion()
             case .failure:
                 self.textField.errorState = .error
+                self.textField.shake()
             }
         }
 
