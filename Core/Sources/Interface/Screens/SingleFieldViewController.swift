@@ -74,13 +74,14 @@ public class SingleFieldViewController: UIViewController {
             case .failure:
                 self.textField.errorState = .error
                 self.textField.shake()
+                self.infoIcon.setTintColor(.error)
             }
         }
 
         textField.addAction { [weak self] in
             guard let self = self else { return }
-            
             self.textField.errorState = .normal
+            self.infoIcon.setTintColor(.primaryText)
         }
     }
 
