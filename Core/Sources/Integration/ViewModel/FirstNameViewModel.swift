@@ -25,17 +25,8 @@ extension SingleFieldViewModel {
                 textField: localize(.first_name_textfield_placeholder)
             ),
             maxLength: validator.nameLength.upperBound,
-            validate: { input in
-                let result = validator.makeFirstName(input: input)
-                switch result {
-                case let .success(firstName):
-                    return .success {
-                        store(firstName)
-                    }
-                case let .failure(error):
-                    return .failure(error)
-                }
-            }
+            validate: validator.makeFirstName,
+            store: store
         )
     }
 }

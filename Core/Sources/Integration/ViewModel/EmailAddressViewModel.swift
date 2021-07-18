@@ -25,17 +25,8 @@ extension SingleFieldViewModel {
                 textField: localize(.email_address_textfield_placeholder)
             ),
             maxLength: validator.emailAddressLength.upperBound,
-            validate: { input in
-                let result = validator.makeEmailAddress(input: input)
-                switch result {
-                case let .success(firstName):
-                    return .success {
-                        store(firstName)
-                    }
-                case let .failure(error):
-                    return .failure(error)
-                }
-            }
+            validate: validator.makeEmailAddress,
+            store: store
         )
     }
 }
