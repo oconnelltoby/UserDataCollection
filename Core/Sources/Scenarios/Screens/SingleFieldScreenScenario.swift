@@ -58,12 +58,12 @@ public extension SingleFieldScreenScenario {
 }
 
 public class SingleFieldSuccessScreenScenario: SingleFieldScreenScenario {
-    public static var path = Path("Prototype Screens", "Single Field", "Success")
+    public static var path = Path("Screens", "Single Field", "Success")
     public static let result: Result<Void, Error> = .success
 }
 
 public class SingleFieldFailureScreenScenario: SingleFieldScreenScenario {
-    public static var path = Path("Prototype Screens", "Single Field", "Failure")
+    public static var path = Path("Screens", "Single Field", "Failure")
     struct TestError: Error {}
     public static let result: Result<Void, Error> = .failure(TestError())
 }
