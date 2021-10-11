@@ -13,7 +13,7 @@ struct Format: ParsableCommand {
     @Argument(help: "Path to code that should be formatted")
     var path: String
 
-    @Flag(help: "If true, lint and report errors rather that running fix")
+    @Flag(help: "If true, lint and report errors rather than performing changes")
     var lint = false
 
     func run() throws {
